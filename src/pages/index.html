@@ -1,0 +1,255 @@
+<!--
+PAGE_TITLE: Fluidtec México | Componentes Industriales & Automatización
+PAGE_DESCRIPTION: Distribuidores de componentes industriales y equipo de automatización. Electroválvulas, pistones, conectores neumáticos y más con envío inmediato.
+PAGE_BODY_CLASS: home page template-slider style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky
+PAGE_ID: index
+PAGE_EXTRA_CSS:
+<style>
+	/* ── Hero Slider ── */
+	.fluidtec-hero-slider { position: relative; width: 100%; height: 720px; overflow: hidden; }
+	.fluidtec-hero-slider .swiper { width: 100%; height: 100%; }
+	.fluidtec-hero-slider .swiper-slide {
+		position: relative; background-size: cover; background-position: center; display: flex; align-items: center;
+	}
+	.fluidtec-hero-slider .slide-overlay {
+		position: absolute; inset: 0;
+		background: linear-gradient(105deg, rgba(10,14,60,0.82) 0%, rgba(10,14,60,0.45) 60%, rgba(0,0,0,0.15) 100%);
+	}
+	.fluidtec-hero-slider .slide-content {
+		position: relative; z-index: 2; padding: 0 80px; max-width: 680px;
+		opacity: 0; transform: translateY(40px);
+		transition: opacity .7s ease .3s, transform .7s ease .3s;
+	}
+	.fluidtec-hero-slider .swiper-slide-active .slide-content { opacity: 1; transform: translateY(0); }
+	.fluidtec-hero-slider .slide-tag {
+		display: inline-block; background: #4ED199; color: #fff;
+		font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700;
+		letter-spacing: 3px; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 22px;
+	}
+	.fluidtec-hero-slider .slide-title { font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 18px; }
+	.fluidtec-hero-slider .slide-title span { color: #4ED199; }
+	.fluidtec-hero-slider .slide-desc { font-family: 'Poppins', sans-serif; font-size: 16px; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 36px; max-width: 520px; }
+	.fluidtec-hero-slider .slide-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+	.fluidtec-hero-slider .btn-primary-ft { background: #2029BD; color: #fff; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 14px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, transform .2s; display: inline-block; }
+	.fluidtec-hero-slider .btn-primary-ft:hover { background: #141ba7; transform: translateY(-2px); }
+	.fluidtec-hero-slider .btn-outline-ft { background: transparent; color: #fff; border: 2px solid #4ED199; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 12px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, color .25s, transform .2s; display: inline-block; }
+	.fluidtec-hero-slider .btn-outline-ft:hover { background: #4ED199; color: #fff; transform: translateY(-2px); }
+	.fluidtec-hero-slider .swiper-button-next, .fluidtec-hero-slider .swiper-button-prev { width: 50px; height: 50px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); border-radius: 2px; transition: background .25s; }
+	.fluidtec-hero-slider .swiper-button-next:hover, .fluidtec-hero-slider .swiper-button-prev:hover { background: #2029BD; border-color: #2029BD; }
+	.fluidtec-hero-slider .swiper-button-next::after, .fluidtec-hero-slider .swiper-button-prev::after { font-size: 16px; color: #fff; font-weight: 700; }
+	.fluidtec-hero-slider .swiper-pagination-bullet { width: 10px; height: 10px; background: rgba(255,255,255,0.5); opacity: 1; }
+	.fluidtec-hero-slider .swiper-pagination-bullet-active { background: #4ED199; }
+	.fluidtec-hero-slider .slider-progress { position: absolute; bottom: 0; left: 0; height: 4px; background: #4ED199; z-index: 10; width: 0%; transition: width linear; }
+	@media (max-width: 768px) {
+		.fluidtec-hero-slider { height: 560px; }
+		.fluidtec-hero-slider .slide-content { padding: 0 24px; max-width: 100%; }
+		.fluidtec-hero-slider .slide-title { font-size: 30px; }
+	}
+</style>
+PAGE_EXTRA_JS:
+<script>
+	(function () {
+		var AUTOPLAY_MS = 6000;
+		var progressEl = document.getElementById('sliderProgress');
+		var swiper = new Swiper('#fluidtecSwiper', {
+			loop: true, speed: 900, effect: 'fade', fadeEffect: { crossFade: true },
+			autoplay: { delay: AUTOPLAY_MS, disableOnInteraction: false },
+			pagination: { el: '.swiper-pagination', clickable: true },
+			navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+			on: {
+				autoplayTimeLeft: function (s, time, progress) {
+					if (progressEl) { progressEl.style.transition = 'none'; progressEl.style.width = ((1 - progress) * 100) + '%'; }
+				},
+				slideChangeTransitionStart: function () {
+					if (progressEl) { progressEl.style.transition = 'none'; progressEl.style.width = '0%'; }
+				}
+			}
+		});
+	})();
+</script>
+PAGE_HEADER_EXTRA: @@partial:hero-slider
+-->
+
+<div id="Content">
+	<div class="section mcb-section no-margin-h" style="padding-top:45px">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="row no-gutters">
+						<div class="col-md-2"> <img src="assets/images/corporation2-home-icon4.png" alt="icon" width="48" height="48"> </div>
+						<div class="col-md-10">
+							<div class="column_attr clearfix align_left" style="padding:0 0 0 5%;">
+								<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:36px;line-height:36px;font-weight:700;letter-spacing:0px;color:#222222;">
+									$<span class="counter-inline animate-math"><span class="number" data-to="39">39</span></span> mln
+								</div>
+								<hr class="no_line" style="margin:0 auto 20px">
+								<p style="font-size:12px;letter-spacing: 3px;margin-top:-15px;">VENTAS ANUALES</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="row no-gutters">
+						<div class="col-md-2"> <img src="assets/images/corporation2-home-icon4.png" alt="icon" width="48" height="48"> </div>
+						<div class="col-md-10">
+							<div class="column_attr clearfix align_left" style="padding:0 0 0 5%;">
+								<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:36px;line-height:36px;font-weight:700;letter-spacing:0px;color:#222222;">
+									+<span class="counter-inline animate-math"><span class="number" data-to="3">3</span></span>.<span class="counter-inline animate-math"><span class="number" data-to="2">2</span></span> %
+								</div>
+								<hr class="no_line" style="margin:0 auto 20px">
+								<p style="font-size:12px;letter-spacing: 3px;margin-top:-15px;">CRECIMIENTO</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="placeholder">&nbsp;</div>
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+						<div class="col-md-2"><div class="placeholder">&nbsp;</div></div>
+						<div class="col-md-10">
+							<div class="column_attr clearfix align_left" style="background-image:url('assets/images/corporation2-icon2.png');background-repeat:no-repeat;background-position:left center;padding:10px 0px 7px 29px;border-style:solid;border-width:0px 0px 2px 0px;border-color:#2029BD;">
+								<h5><a class="scroll" href="#products">Nuestros productos</a></h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" style="padding-bottom:55px">
+		<div class="container">
+			<div class="row">
+				<div class="col-12"><hr class="no_line" style="margin:0 auto 30px"></div>
+				<div class="col-md-6" style="padding:30px 30px 0px 0px">
+					<div class="column_attr clearfix" style="padding:15px 10px 15px 0px;">
+						<div class="image_frame image_item no_link scale-with-grid no_border">
+							<div class="image_wrapper"><img class="scale-with-grid" src="assets/images/corporation2-home-pic1.jpg" alt="Fluidtec" width="780" height="780"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5" style="padding:40px 2% 0px">
+					<h2>Nuestro modelo de negocio</h2>
+					<p>Somos distribuidores especializados en componentes industriales y de automatización, comprometidos con la calidad y el servicio.</p>
+					<hr class="no_line" style="margin:0 auto 20px">
+					<div class="column_attr clearfix" style="background-image:url('assets/images/corporation2-icon1.png');background-repeat:no-repeat;background-position:left top;">
+						<h5 style="padding:0px 0px 0px 50px">Selección y compatibilidad de productos para tu industria.</h5>
+						<h6 style="padding:0px 0px 0px 50px">ASESORÍA TÉCNICA</h6>
+					</div>
+					<hr class="no_line" style="margin:0 auto 20px">
+					<p>Venta y envío inmediato de mercancía, instalación de equipos, capacitación y mantenimiento.</p>
+					<hr class="no_line" style="margin:0 auto 40px auto">
+					<a class="button button_size_2 button_theme" href="about.html"><span class="button_label">NOSOTROS</span></a>
+					<a class="button button_size_2" href="proyectos.html"><span class="button_label">PROYECTOS</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section mcb-section bg-cover" style="background-image:url(assets/images/corporation2-sectionbg1.jpg);background-repeat:no-repeat;background-position:center">
+		<div class="container">
+			<div class="row" style="padding:0% 11%">
+				<div class="col-12">
+					<div class="text-center" style="padding:180px 0px 170px 0px;">
+						<h3 style="text-align:center;"><span style="color:#fafafa;">Segmentos de actividad<br>y reportes actuales</span></h3>
+						<h5 style="text-align:center;"><span style="color:#ac9d94;">Contamos con una amplia variedad de soluciones para la industria manufacturera, alimentaria, automotriz y más.</span></h5>
+						<hr class="no_line" style="margin:0 auto 35px auto">
+						<a class="button button_size_2 button_theme" href="investor-relations.html"><span class="button_label">VER MÁS</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="products" style="padding-top:80px;padding-bottom:55px;background-image:url(assets/images/corporation2-sectionbg2.png);background-repeat:no-repeat;background-position:center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8" style="padding:30px 30px 30px 0px">
+					<h2>Tres pilares de nuestra estrategia</h2>
+					<h5>Equipo neumático, de control y eléctrico para toda la industria</h5>
+				</div>
+				<div class="col-md-4" style="padding:30px 38px 0px 0px">
+					<img class="scale-with-grid" src="assets/images/corporation2-home-pic2.png" alt="Equipo Neumático" width="155" height="90">
+					<hr class="no_line" style="margin:0 auto 20px">
+					<h3>Equipo Neumático</h3>
+					<h6>ELECTROVÁLVULAS, PISTONES Y CONECTORES</h6>
+					<p>Amplio catálogo de componentes neumáticos certificados con disponibilidad inmediata.</p>
+					<i class="icon-check"><span>Electroválvulas</span></i><br>
+					<i class="icon-check"><span>Pistones y cilindros</span></i><br>
+					<i class="icon-check"><span>Tratamiento de aire</span></i><br>
+					<i class="icon-check"><span>Conectores y mangueras</span></i>
+					<hr class="no_line" style="margin:0 auto 50px auto">
+					<a class="button button_size_2" href="for-press.html"><span class="button_label">VER MÁS</span></a>
+				</div>
+				<div class="col-md-4" style="padding:30px 38px 0px 0px">
+					<img class="scale-with-grid" src="assets/images/corporation2-home-pic3.png" alt="Equipo de Control" width="155" height="90">
+					<hr class="no_line" style="margin:0 auto 20px">
+					<h3>Equipo de Control</h3>
+					<h6>SENSORES, VARIADORES Y PLCs</h6>
+					<p>Soluciones de automatización y control industrial para optimizar tus procesos.</p>
+					<i class="icon-check"><span>Sensores industriales</span></i><br>
+					<i class="icon-check"><span>Variadores de frecuencia</span></i><br>
+					<i class="icon-check"><span>PLCs y HMIs</span></i><br>
+					<i class="icon-check"><span>Controladores de proceso</span></i>
+					<hr class="no_line" style="margin:0 auto 50px auto">
+					<a class="button button_size_2" href="for-press.html"><span class="button_label">VER MÁS</span></a>
+				</div>
+				<div class="col-md-4" style="padding:30px 38px 0px 0px">
+					<img class="scale-with-grid" src="assets/images/corporation2-home-pic4.png" alt="Equipo Eléctrico" width="155" height="90">
+					<hr class="no_line" style="margin:0 auto 20px">
+					<h3>Equipo Eléctrico</h3>
+					<h6>MOTORES, CONTACTORES Y PROTECCIONES</h6>
+					<p>Componentes eléctricos de alta calidad para instalaciones industriales y comerciales.</p>
+					<i class="icon-check"><span>Motores eléctricos</span></i><br>
+					<i class="icon-check"><span>Contactores y relevadores</span></i><br>
+					<i class="icon-check"><span>Protecciones eléctricas</span></i><br>
+					<i class="icon-check"><span>Tableros de control</span></i>
+					<hr class="no_line" style="margin:0 auto 50px auto">
+					<a class="button button_size_2" href="for-press.html"><span class="button_label">VER MÁS</span></a>
+				</div>
+				<div class="col-12" style="padding:0 0 30px 0">
+					<hr class="no_line" style="margin:0 auto 50px auto">
+					<hr style="margin:0 auto 40px;">
+				</div>
+				<div class="col-md-4">
+					<div class="row no-gutters">
+						<div class="col-md-2"><img src="assets/images/corporation2-home-icon1.png" alt="icon" width="48" height="48"></div>
+						<div class="col-md-6 text-center">
+							<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:36px;line-height:36px;font-weight:700;letter-spacing:0px;color:#222;">
+								<span class="counter-inline animate-math"><span class="number" data-to="2960000">2960000</span></span>
+							</div>
+							<hr class="no_line" style="margin:0 auto 20px">
+							<p style="font-size:12px;letter-spacing:3px;margin-top:-15px;">PRODUCTOS ENTREGADOS</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="row no-gutters">
+						<div class="col-md-2"><img src="assets/images/corporation2-home-icon2.png" alt="icon" width="48" height="48"></div>
+						<div class="col-md-6 text-center">
+							<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:36px;line-height:36px;font-weight:700;letter-spacing:0px;color:#222;">
+								<span class="counter-inline animate-math"><span class="number" data-to="1530">1530</span></span>
+							</div>
+							<hr class="no_line" style="margin:0 auto 20px">
+							<p style="font-size:12px;letter-spacing:3px;margin-top:-15px;">CLIENTES ACTIVOS</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="row no-gutters">
+						<div class="col-md-2"><img src="assets/images/corporation2-home-icon3.png" alt="icon" width="48" height="48"></div>
+						<div class="col-md-6 text-center">
+							<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:36px;line-height:36px;font-weight:700;letter-spacing:0px;color:#222;">
+								<span class="counter-inline animate-math"><span class="number" data-to="128">128</span></span> %
+							</div>
+							<hr class="no_line" style="margin:0 auto 20px">
+							<p style="font-size:12px;letter-spacing:3px;margin-top:-15px;">SATISFACCIÓN</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

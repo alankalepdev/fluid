@@ -1,0 +1,48 @@
+/* ===== About / Product Slider ===== */
+.about-slider-wrap {
+	padding-bottom: 50px;
+}
+
+.about-slider-wrap .swiper-pagination {
+	bottom: 10px;
+}
+
+.about-slider-wrap .swiper-pagination-bullet {
+	background: #2029BD;
+	opacity: 0.35;
+	width: 10px;
+	height: 10px;
+}
+
+.about-slider-wrap .swiper-pagination-bullet-active {
+	background: #2029BD;
+	opacity: 1;
+}
+
+.about-slider-wrap .swiper-button-prev,
+.about-slider-wrap .swiper-button-next {
+	width: 44px;
+	height: 44px;
+	background: #fff;
+	border: 2px solid #2029BD;
+	border-radius: 50%;
+	color: #2029BD;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+	top: 50%;
+	transform: translateY(-50%);
+	transition: background .25s, color .25s;
+}
+
+.about-slider-wrap .swiper-button-prev:hover,
+.about-slider-wrap .swiper-button-next:hover {
+	background: #2029BD;
+	color: #fff;
+}
+
+.about-slider-wrap .swiper-button-prev::after,
+.about-slider-wrap .swiper-button-next::after {
+	font-size: 16px;
+	font-weight: 700;
+	color: inherit;
+	font-family: swiper-icons !important;
+}

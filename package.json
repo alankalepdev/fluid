@@ -1,0 +1,11 @@
+{
+  "name": "fluidtec-site",
+  "version": "1.0.0",
+  "description": "Fluidtec México – Sitio estático con build system",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node -e \"const{execSync}=require('child_process');const fs=require('fs');let t;fs.watch('src',{recursive:true},()=>{clearTimeout(t);t=setTimeout(()=>{try{execSync('node build.js',{stdio:'inherit'})}catch(e){}},300)});console.log('👀  Watching src/ ...');\""
+  },
+  "author": "Fluidtec México",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,7 @@
+# Fluidtec – Build System
+# Los HTML en la raíz son generados por build.js, edita solo src/pages/
+# Si prefieres versionar los HTML generados, comenta las líneas de abajo.
+
+# node_modules (si en algún momento instalas dependencias)
+node_modules/
+assets/fichas-tecnicas/
