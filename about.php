@@ -39,15 +39,15 @@ require 'partials/head.php';
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6" style="padding:0 3% 0 0">
-					<h3>Distribuidores especializados en componentes industriales</h3>
-					<p>Somos una empresa mexicana con amplia experiencia en la distribución de componentes industriales y de automatización, comprometidos con la calidad y el servicio a nuestros clientes.</p>
+					<h3>Soluciones industriales con experiencia, compromiso y confianza.</h3>
+					<p>Somos un equipo de especialistas en automatización y control industrial. Acompañamos a nuestros clientes en cada etapa del proyecto, con productos confiables y un servicio técnico de alto nivel.</p>
 					<hr class="no_line" style="margin:0 auto 20px">
-					<i class="icon-check" style="color:#000">Selección y compatibilidad de productos</i><br>
-					<i class="icon-check" style="color:#000">Asesoría técnica especializada</i>
-					<hr class="no_line" style="margin:0 auto 20px">
-					<p>Nuestro equipo de expertos está disponible para ayudarte a identificar las necesidades técnicas de tu proyecto y ofrecerte los productos que mejor se adapten a tus requerimientos.</p>
+					<i class="icon-check" style="color:#000">Asesoría técnica especializada</i><br>
+					<i class="icon-check" style="color:#000">Productos de marcas líderes</i><br>
+					<i class="icon-check" style="color:#000">Compatibilidad y selección adecuada</i><br>
+					<i class="icon-check" style="color:#000">Instalación, puesta en marcha y mantenimiento</i>
 					<hr class="no_line" style="margin:0 auto 50px">
-					<a class="button button_size_2 button_theme" href="proyectos.php"><span class="button_label">PROYECTOS</span></a>
+					<a class="button button_size_2 button_theme" href="about.php"><span class="button_label">CONÓCENOS</span></a>
 					<hr class="no_line" style="margin:0 auto 50px">
 				</div>
 				<div class="col-md-3" style="padding:0 0 0 3%">
@@ -96,30 +96,82 @@ require 'partials/head.php';
 			</div>
 		</div>
 	</div>
+	<!-- Misión, Visión, Objetivos y Valores -->
+	<div class="section" style="padding-top:60px;padding-bottom:60px;background:#f4f6fb;">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center" style="margin-bottom:40px">
+					<h6 style="color:#4ED199;letter-spacing:3px;font-family:'Poppins',sans-serif;">FILOSOFÍA EMPRESARIAL</h6>
+					<h2 style="color:#2029BD;">Misión, Visión, Objetivos y Valores</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<table style="width:100%;border-collapse:collapse;font-family:'Poppins',Arial,sans-serif;">
+						<tr>
+							<td style="background:#b8c4e8;color:#1a1a2e;font-size:18px;font-weight:700;padding:26px 30px;width:150px;vertical-align:middle;border:2px solid #d0d8f0;text-align:center;">Misión</td>
+							<td style="background:#fff;color:#444;padding:26px 30px;border:2px solid #d0d8f0;line-height:1.8;text-align:center;">Somos una empresa que brinda comodidad en la comercialización de equipos de automatización respondiendo oportunamente a las necesidades de nuestros clientes, colaboradores, accionistas y proveedores manteniendo una alta calidad de servicio.</td>
+						</tr>
+						<tr>
+							<td style="background:#b8c4e8;color:#1a1a2e;font-size:18px;font-weight:700;padding:26px 30px;vertical-align:middle;border:2px solid #d0d8f0;text-align:center;">Visión</td>
+							<td style="background:#fff;color:#444;padding:26px 30px;border:2px solid #d0d8f0;line-height:1.8;text-align:center;">Ser líder en la venta y distribución de equipos de automatización a nivel nacional como una empresa competitiva siendo eficientes y eficaces.</td>
+						</tr>
+						<tr>
+							<td style="background:#b8c4e8;color:#1a1a2e;font-size:18px;font-weight:700;padding:26px 30px;vertical-align:middle;border:2px solid #d0d8f0;text-align:center;">Objetivos</td>
+							<td style="background:#fff;color:#444;padding:26px 30px;border:2px solid #d0d8f0;line-height:1.8;text-align:center;">Consolidar el nombre de la empresa <strong>FLUIDTEC MÉXICO</strong> a nivel nacional a través de la calidad de los servicios que ofrecemos al usuario / cliente.</td>
+						</tr>
+						<tr>
+							<td style="background:#b8c4e8;color:#1a1a2e;font-size:18px;font-weight:700;padding:26px 30px;vertical-align:middle;border:2px solid #d0d8f0;text-align:center;">Valores</td>
+							<td style="background:#fff;color:#444;padding:26px 30px;border:2px solid #d0d8f0;line-height:2.2;text-align:center;">
+								Respeto<br>Responsabilidad<br>Integridad<br>Honestidad<br>Pasión<br>Empatía
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="section" style="padding-bottom:55px">
 		<div class="container">
 			<div class="row">
 				<div class="col-12"><hr class="no_line" style="margin:0 auto 70px"></div>
-				<div class="col-md-6" style="padding:30px 30px 0px 0px">
+				<div class="col-md-5" style="padding:30px 30px 0px 0px">
 					<div class="column_attr clearfix" style="padding:15px 10px 15px 0px;">
 						<div class="image_frame image_item no_link scale-with-grid no_border">
 							<div class="image_wrapper"><img class="scale-with-grid" src="assets/images/corporation2-home-pic1.jpg" alt="Fluidtec" width="780" height="780"></div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-5" style="padding:40px 2% 0px">
-					<h2>Nuestro modelo de negocios</h2>
-					<p>Somos distribuidores especializados en componentes industriales y de automatización, comprometidos con la calidad y el servicio.</p>
+				<div class="col-md-7" style="padding:40px 2% 0px">
+					<h2>Nuestro modelo<br>de negocios</h2>
+					<p>Entregamos valor a la industria a través de soluciones integrales que combinan tecnología, conocimiento y servicio.</p>
 					<hr class="no_line" style="margin:0 auto 20px">
-					<div class="column_attr clearfix" style="background-image:url('assets/images/corporation2-icon1.png');background-repeat:no-repeat;background-position:left top;">
-						<h5 style="padding:0px 0px 0px 50px">Selección y compatibilidad de productos para tu industria.</h5>
-						<h6 style="padding:0px 0px 0px 50px">ASESORÍA TÉCNICA</h6>
+					<div class="row" style="text-align:center;margin-bottom:20px;">
+						<div class="col-md-3 col-6" style="padding:10px;">
+							<i class="icon-cog-line" style="font-size:32px;color:#2029BD;"></i>
+							<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Selección y<br>compatibilidad</p>
+							<p style="font-size:11px;color:#777;">Elegimos los componentes ideales para cada aplicación.</p>
+						</div>
+						<div class="col-md-3 col-6" style="padding:10px;">
+							<i class="icon-truck-line" style="font-size:32px;color:#2029BD;"></i>
+							<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Envío inmediato</p>
+							<p style="font-size:11px;color:#777;">Stock disponible y logística rápida para minimizar tiempos de paro.</p>
+						</div>
+						<div class="col-md-3 col-6" style="padding:10px;">
+							<i class="icon-tools" style="font-size:32px;color:#2029BD;"></i>
+							<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Instalación y puesta<br>en marcha</p>
+							<p style="font-size:11px;color:#777;">Especialistas presentes para un arranque seguro y eficiente.</p>
+						</div>
+						<div class="col-md-3 col-6" style="padding:10px;">
+							<i class="icon-phone" style="font-size:32px;color:#2029BD;"></i>
+							<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Mantenimiento<br>y soporte</p>
+							<p style="font-size:11px;color:#777;">Acompañamiento continuo para garantizar la operación.</p>
+						</div>
 					</div>
-					<hr class="no_line" style="margin:0 auto 20px">
-					<p>Venta y envío inmediato de mercancía, instalación de equipos, capacitación y mantenimiento.</p>
-					<hr class="no_line" style="margin:0 auto 40px auto">
-					<a class="button button_size_2 button_theme" href="contacto.php"><span class="button_label">COTIZAR AHORA</span></a>
-					<a class="button button_size_2" href="proyectos.php"><span class="button_label">PROYECTOS</span></a>
+					<hr class="no_line" style="margin:0 auto 20px auto">
+					<a class="button button_size_2 button_theme" href="proyectos.php"><span class="button_label">VER SOLUCIONES</span></a>
+					<a class="button button_size_2" href="contacto.php"><span class="button_label">HABLAR CON UN EXPERTO &rarr;</span></a>
 				</div>
 				<div class="col-12"><hr class="no_line" style="margin:0 auto 70px"></div>
 			</div>

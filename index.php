@@ -171,7 +171,7 @@ require 'partials/head.php';
 													class="button button_size_2"
 													style="cursor:pointer;border:none;background:#f4f4f4;color:#2029BD;font-weight:700;letter-spacing:1px;"
 													onclick="abrirFichas(<?= $idx ?>)">
-													<span class="button_label"><i class="icon-doc-text-inv"></i> FICHAS TÉCNICAS</span>
+													<span class="button_label"><i class="icon-doc-text-inv"></i> FICHA TÉCNICA</span>
 												</button>
 											<?php endif; ?>
 										</div>
@@ -183,7 +183,7 @@ require 'partials/head.php';
 
 					<!-- Modal Fichas Técnicas -->
 					<div id="fichas-modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99999;align-items:center;justify-content:center;">
-						<div id="fichas-modal-box" style="background:#fff;border-radius:6px;width:90%;max-width:560px;max-height:80vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.25);">
+						<div id="fichas-modal-box" style="background:#fff;border-radius:6px;width:90%;max-width:900px;max-height:80vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.25);">
 							<div style="background:#2029BD;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;border-radius:6px 6px 0 0;">
 								<h4 id="fichas-modal-title" style="color:#fff;margin:0;font-size:18px;"></h4>
 								<button onclick="cerrarFichas()" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1;">&times;</button>
