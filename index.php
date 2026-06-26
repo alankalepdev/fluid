@@ -8,7 +8,7 @@ $page_extra_css   = <<<'CSS'
 	.fluidtec-hero-slider { position: relative; width: 100%; height: 720px; overflow: hidden; }
 	.fluidtec-hero-slider .swiper { width: 100%; height: 100%; }
 	.fluidtec-hero-slider .swiper-slide { position: relative; background-size: cover; background-position: center; display: flex; align-items: center; }
-	.fluidtec-hero-slider .slide-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(10,14,60,0.82) 0%, rgba(10,14,60,0.45) 60%, rgba(0,0,0,0.15) 100%); }
+	.fluidtec-hero-slider .slide-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(10,14,60,0.82) 0%, rgba(10,14,60,0.45) 60%, rgba(0,0,0,0.15) 75%); }
 	.fluidtec-hero-slider .slide-content { position: relative; z-index: 2; padding: 0 80px; max-width: 680px; opacity: 0; transform: translateY(40px); transition: opacity .7s ease .3s, transform .7s ease .3s; }
 	.fluidtec-hero-slider .swiper-slide-active .slide-content { opacity: 1; transform: translateY(0); }
 	.fluidtec-hero-slider .slide-tag { display: inline-block; background: #4ED199; color: #fff; font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 22px; }
@@ -232,18 +232,21 @@ require 'partials/head.php';
 			</div>
 
 
-			<div class="section mcb-section bg-cover" style="background-image:url(assets/images/corporation2-sectionbg1.jpg);background-repeat:no-repeat;background-position:center">
+			<!-- Compromiso con la calidad -->
+			<div class="section mcb-section" style="padding:70px 0 0;">
 				<div class="container">
-					<div class="row" style="padding:0% 11%">
-						<div class="col-12">
-							<div class="text-center" style="padding:180px 0px 170px 0px;">
-								<h3 style="text-align:center;"><span style="color:#fafafa;">Segmentos de actividad<br>y reportes actuales</span></h3>
-								<h5 style="text-align:center;"><span style="color:#ac9d94;">Contamos con una amplia variedad de soluciones para la industria manufacturera, alimentaria, automotriz y más.</span></h5>
-								<hr class="no_line" style="margin:0 auto 35px auto">
-								<a class="button button_size_2 button_theme" href="proyectos.php"><span class="button_label">VER MÁS</span></a>
-							</div>
+					<div class="row">
+						<div class="col-12 text-center" style="margin-bottom:40px;">
+							<h6 style="color:#4ED199;letter-spacing:3px;font-family:'Poppins',sans-serif;">ESTÁNDARES INDUSTRIALES</h6>
+							<h2 style="color:#2029BD;">Compromiso con la calidad</h2>
+							<p style="color:#666;max-width:600px;margin:0 auto;">Soluciones de ingeniería para la industria manufacturera, alimentaria, automotriz y más, con los más altos estándares de calidad.</p>
 						</div>
 					</div>
+				</div>
+				<div style="width:100%;line-height:0;">
+					<video autoplay muted loop playsinline style="width:100%;display:block;">
+						<source src="assets/images/fluidtec-industrial-video.mp4" type="video/mp4">
+					</video>
 				</div>
 			</div>
 

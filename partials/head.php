@@ -13,6 +13,8 @@
 	<title><?= htmlspecialchars($page_title ?? 'Fluidtec México') ?></title>
 	<meta name="description" content="<?= htmlspecialchars($page_description ?? '') ?>">
 	<meta name="author" content="Fluidtec México">
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net;">
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Favicons -->
