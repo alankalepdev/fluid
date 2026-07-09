@@ -252,8 +252,9 @@ require 'partials/head.php';
 					<h1>Proyectos industriales que<br>transforman procesos</h1>
 					<p>Integramos automatización, control eléctrico, neumática e ingeniería aplicada para soluciones reales en planta.</p>
 					<div style="margin-bottom: 30px;">
-						<a class="button button_size_2" href="#casos" style="background: #fff; color: #2029BD; margin-right: 15px;">
-							<span class="button_label">Ver casos de éxito</span>
+						<a class="button button_size_2" href="/equipos.php" style="background: #fff; color: #2029BD; margin-right: 15px;">
+							<span class="button_label">Ver nuestros equipos</span>
+
 						</a>
 						<a class="button button_size_2" href="contacto.php" style="background: transparent; border: 2px solid #fff; color: #fff;">
 							<span class="button_label">Solicitar cotización</span>
@@ -440,9 +441,36 @@ require 'partials/head.php';
 					<p style="font-size: 16px; color: #666; line-height: 1.7; margin-bottom: 25px;">
 						Colaboramos con las principales empresas de México en proyectos de automatización y ingeniería que impulsan productividad.
 					</p>
-					<div class="image_frame image_item no_link scale-with-grid no_border">
-						<div class="image_wrapper">
-							<img class="scale-with-grid" src="assets/images/corporation2-relations-pic4.png" alt="Clientes Fluidtec" style="border-radius: 8px;">
+					<div class="row" style="row-gap: 20px;">
+						<div class="col-4">
+							<div class="image_frame image_item no_link scale-with-grid no_border" style="background: #F8F9FA; border-radius: 8px; padding: 15px; display: flex; align-items: center; justify-content: center; height: 90px;">
+								<img class="scale-with-grid" src="assets/images/brands/BERRY-GLOBAL.png" alt="Berry Global">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="image_frame image_item no_link scale-with-grid no_border" style="background: #F8F9FA; border-radius: 8px; padding: 15px; display: flex; align-items: center; justify-content: center; height: 90px;">
+								<img class="scale-with-grid" src="assets/images/brands/BMW.png" alt="BMW">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="image_frame image_item no_link scale-with-grid no_border" style="background: #F8F9FA; border-radius: 8px; padding: 15px; display: flex; align-items: center; justify-content: center; height: 90px;">
+								<img class="scale-with-grid" src="assets/images/brands/CITROFRUT.png" alt="Citrofrut">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="image_frame image_item no_link scale-with-grid no_border" style="background: #F8F9FA; border-radius: 8px; padding: 15px; display: flex; align-items: center; justify-content: center; height: 90px;">
+								<img class="scale-with-grid" src="assets/images/brands/DAIKIN.png" alt="Daikin">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="image_frame image_item no_link scale-with-grid no_border" style="background: #F8F9FA; border-radius: 8px; padding: 15px; display: flex; align-items: center; justify-content: center; height: 90px;">
+								<img class="scale-with-grid" src="assets/images/brands/LOREAL.png" alt="L'Oréal">
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="image_frame image_item no_link scale-with-grid no_border" style="background: #F8F9FA; border-radius: 8px; padding: 15px; display: flex; align-items: center; justify-content: center; height: 90px;">
+								<img class="scale-with-grid" src="assets/images/brands/PEASA.png" alt="Peasa">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -512,7 +540,7 @@ require 'partials/head.php';
 		</div>
 	</div>
 	<!-- Fichas técnicas y catálogos -->
-	<div class="section" style="padding: 80px 0; background: #F8F9FA;">
+	<!-- <div class="section" style="padding: 80px 0; background: #F8F9FA;">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center" style="margin-bottom: 50px;">
@@ -561,7 +589,7 @@ require 'partials/head.php';
 			</div>
 			<?php endforeach; ?>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <?php require 'partials/footer.php'; ?>

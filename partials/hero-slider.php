@@ -4,7 +4,7 @@
 		<div class="swiper-wrapper">
 
 			<!-- Slide 1 – Componentes Industriales -->
-			<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-1.png');">
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-1.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">Proyectos Industriales</span>
@@ -18,12 +18,12 @@
 			</div>
 
 			<!-- Slide 2 – Equipo Neumático -->
-			<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-2.png');">
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-2.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">EMPRESAS DE CONFIANZA</span>
 					<h1 class="slide-title">Trabajamos con la<span> industria</span> que<br> mueve a<span> México</span></h1>
-					<p class="slide-desc">Distribuimos contactores industriales, arrancadores directos y estrella-triángulo para el control confiable de motores eléctricos en cualquier aplicación.</p>
+					<p class="slide-desc">Soluciones confiables en acero inoxidable para sistemas de automatización industrial.</p>
 					<div class="slide-btns">
 						<a href="equipos.php" class="btn-primary-ft">Ver Proyectos</a>
 						<a href="contacto.php" class="btn-outline-ft">Contactar</a>
@@ -32,7 +32,7 @@
 			</div>
 
 			<!-- Slide 3 – Precios Competitivos -->
-			<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-3.png');">
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-3.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">ASESORÍA PERSONALIZADA</span>
@@ -46,7 +46,7 @@
 			</div>
 
 			<!-- Slide 4 – Empresas de Confianza -->
-			<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-4.png');">
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-4.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">COMPONENTES neumáticOS</span>
@@ -60,7 +60,7 @@
 			</div>
 
 			<!-- Slide 5 – Soporte Técnico -->
-			<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-5.png');">
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-5.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">Soluciones industriales</span>

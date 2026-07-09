@@ -228,13 +228,13 @@ require 'partials/head.php';
 		text-align: center;
 	}
 	.mvov-card-body h3 {
-		font-size: 20px;
+		font-size: 34px;
 		font-weight: 700;
 		color: #2029BD;
 		margin-bottom: 12px;
 	}
 	.mvov-card-body p {
-		font-size: 14px;
+		font-size: 20px;
 		color: #666;
 		line-height: 1.75;
 		margin: 0;
@@ -249,79 +249,18 @@ require 'partials/head.php';
 			<div class="section mcb-section no-margin-h full-width" style="padding-bottom:35px">
 				<div class="row">
 					<div class="col-md-6 text-center" style="padding:5% 0px 0px 0px;background-color:#e7e9ee">
-						<img src="assets/images/corporation2-about-pic3.png" alt="Fluidtec" width="30" height="30">
 						<hr class="no_line" style="margin:0 auto 10px auto">
-						<h2><span style="color:#2029bd;">Quiénes somos<br>y nuestro equipo</span></h2>
+						<h2><span style="color:#2029bd;">IDENTIDAD CORPORATIVA </span></h2>
+						<p>Conoce nuestra vision, mision y valores.</p>
 					</div>
-					<div class="col-md-6" style="padding:20px 5%;">
-						<img src="assets/images/corporation2-about-pic2.jpg" alt="Fluidtec equipo" width="960" height="360">
-					</div>
-				</div>
-			</div>
-			<div class="section" style="padding-top:78px;padding-bottom:3px">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6" style="padding:0 3% 0 0">
-							<h3>Soluciones industriales con experiencia, compromiso y confianza.</h3>
-							<p>Somos un equipo de especialistas en automatización y control industrial. Acompañamos a nuestros clientes en cada etapa del proyecto, con productos confiables y un servicio técnico de alto nivel.</p>
-							<hr class="no_line" style="margin:0 auto 20px">
-							<i class="icon-check" style="color:#000">Asesoría técnica especializada</i><br>
-							<i class="icon-check" style="color:#000">Productos de marcas líderes</i><br>
-							<i class="icon-check" style="color:#000">Compatibilidad y selección adecuada</i><br>
-							<i class="icon-check" style="color:#000">Instalación, puesta en marcha y mantenimiento</i>
-							<hr class="no_line" style="margin:0 auto 50px">
-							<a class="button button_size_2 button_theme" href="about.php"><span class="button_label">CONÓCENOS</span></a>
-							<hr class="no_line" style="margin:0 auto 50px">
-						</div>
-						<div class="col-md-3" style="padding:0 0 0 3%">
-							<div class="column_attr clearfix align_center" style="background-color:#000;padding:60px 0 50px 0;margin-right:10%">
-								<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:69px;line-height:69px;font-weight:700;letter-spacing:0px;color:#fff;">
-									<span class="counter-inline animate-math"><span class="number" data-to="96">96</span></span>
-								</div>
-							</div>
-							<hr class="no_line" style="margin:0 auto 20px">
-							<h3>Años de experiencia en la industria</h3>
-							<p>Décadas brindando soluciones industriales de calidad en México.</p>
-						</div>
-						<div class="col-md-3" style="padding:0 0 0 3%">
-							<div class="column_attr clearfix align_center" style="background-color:#e7e9ee;padding:60px 0 50px 0;margin-right:10%">
-								<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:69px;line-height:69px;font-weight:700;letter-spacing:0px;color:#2029BD;">
-									<span class="counter-inline animate-math"><span class="number" data-to="24">24</span></span>
-								</div>
-							</div>
-							<hr class="no_line" style="margin:0 auto 20px">
-							<h3>Soporte disponible todo el día</h3>
-							<p>Atención técnica y comercial disponible para tus proyectos.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section mcb-section no-margin-h full-width" style="padding-top:50px">
-				<div class="row">
 					<div class="col-md-6">
-						<img src="assets/images/corporation2-about-pic1.jpg" alt="Fluidtec instalaciones" width="960" height="720">
-					</div>
-					<div class="col-md-6" style="padding:5% 30px;background-color:#e7e9ee">
-						<div class="row">
-							<div class="col-md-10">
-								<h3>Comprometidos con la calidad de servicio en cada proyecto industrial</h3>
-								<h5>Brindamos a todos nuestros clientes asesoría integral, desde la selección hasta la instalación y mantenimiento.</h5>
-								<p style="color:#000;">
-									<i class="icon-check" style="color:#4ED199;"></i> Selección &amp; compatibilidad de productos<br>
-									<i class="icon-check" style="color:#4ED199;"></i> Venta &amp; envío de mercancía<br>
-									<i class="icon-check" style="color:#4ED199;"></i> Instalación de equipos<br>
-									<i class="icon-check" style="color:#4ED199;"></i> Capacitación &amp; mantenimiento
-								</p>
-								<hr class="no_line" style="margin:0 auto 45px auto">
-								<a class="button button_size_2 button_theme" href="contacto.php"><span class="button_label">CONTÁCTANOS</span></a>
-							</div>
-						</div>
+						<img src="assets/images/img_nosotros.png" alt="Fluidtec equipo" width="960" height="360">
 					</div>
 				</div>
 			</div>
 			<!-- Misión, Visión, Objetivos y Valores -->
-			<div class="section" style="padding-top:60px;padding-bottom:60px;background:#f4f6fb;">
-				<div class="container">
+			<div class="section" style="padding-top:60px;padding-bottom:60px; padding-left: 15%; padding-right: 15%; background:#f4f6fb;">
+				<div>
 					<div class="row">
 						<div class="col-12 text-center" style="margin-bottom:50px">
 							<h6 style="color:#4ED199;letter-spacing:3px;font-family:'Poppins',sans-serif;">FILOSOFÍA EMPRESARIAL</h6>
@@ -387,17 +326,17 @@ require 'partials/head.php';
 					</div>
 				</div>
 			</div>
-
-			<div class="section" style="padding-bottom:55px">
+			<!-- Modelo de negocio y experiencia -->
+			 <div class="section" style="padding-bottom:55px">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
 							<hr class="no_line" style="margin:0 auto 70px">
 						</div>
-						<div class="col-md-5" style="padding:30px 30px 0px 0px">
-							<div class="column_attr clearfix" style="padding:15px 10px 15px 0px;">
+						<div class="col-md-5" style="padding:10px 10px 0px 0px">
+							<div class="column_attr clearfix" style="padding:10px 5px 10px 5px;">
 								<div class="image_frame image_item no_link scale-with-grid no_border">
-									<div class="image_wrapper"><img class="scale-with-grid" src="assets/images/corporation2-home-pic1.jpg" alt="Fluidtec" width="780" height="780"></div>
+									<div class="image_wrapper"><img class="scale-with-grid" src="assets/images/img_modelo.png" alt="Fluidtec" width="780" height="780"></div>
 								</div>
 							</div>
 						</div>
@@ -437,6 +376,70 @@ require 'partials/head.php';
 					</div>
 				</div>
 			</div>
+
+			<div class="section" style="padding-top:78px;padding-bottom:3px">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6" style="padding:0 3% 0 0">
+							<h3>Soluciones industriales con experiencia, compromiso y confianza.</h3>
+							<p>Somos un equipo de especialistas en automatización y control industrial. Acompañamos a nuestros clientes en cada etapa del proyecto, con productos confiables y un servicio técnico de alto nivel.</p>
+							<hr class="no_line" style="margin:0 auto 20px">
+							<i class="icon-check" style="color:#000">Asesoría técnica especializada</i><br>
+							<i class="icon-check" style="color:#000">Productos de marcas líderes</i><br>
+							<i class="icon-check" style="color:#000">Compatibilidad y selección adecuada</i><br>
+							<i class="icon-check" style="color:#000">Instalación, puesta en marcha y mantenimiento</i>
+							<hr class="no_line" style="margin:0 auto 50px">
+							<a class="button button_size_2 button_theme" href="about.php"><span class="button_label">CONÓCENOS</span></a>
+							<hr class="no_line" style="margin:0 auto 50px">
+						</div>
+						<div class="col-md-3" style="padding:0 0 0 3%">
+							<div class="column_attr clearfix align_center" style="background-color:#000;padding:60px 0 50px 0;margin-right:10%">
+								<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:69px;line-height:69px;font-weight:700;letter-spacing:0px;color:#fff;">
+									<span class="counter-inline animate-math"><span class="number" data-to="20">20</span></span>
+								</div>
+							</div>
+							<hr class="no_line" style="margin:0 auto 20px">
+							<h3>Años de experiencia en la industria</h3>
+							<p>Décadas brindando soluciones industriales de calidad en México.</p>
+						</div>
+						<div class="col-md-3" style="padding:0 0 0 3%">
+							<div class="column_attr clearfix align_center" style="background-color:#e7e9ee;padding:60px 0 50px 0;margin-right:10%">
+								<div class="google_font" style="font-family:'Poppins',Arial,Tahoma,sans-serif;font-size:69px;line-height:69px;font-weight:700;letter-spacing:0px;color:#2029BD;">
+									<span class="counter-inline animate-math"><span class="number" data-to="24">24</span></span>
+								</div>
+							</div>
+							<hr class="no_line" style="margin:0 auto 20px">
+							<h3>Soporte disponible todo el día</h3>
+							<p>Atención técnica y comercial disponible para tus proyectos.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="section mcb-section no-margin-h full-width" style="padding-top:50px">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="assets/images/corporation2-about-pic1.jpg" alt="Fluidtec instalaciones" width="960" height="720">
+					</div>
+					<div class="col-md-6" style="padding:5% 30px;background-color:#e7e9ee">
+						<div class="row">
+							<div class="col-md-10">
+								<h3>Comprometidos con la calidad de servicio en cada proyecto industrial</h3>
+								<h5>Brindamos a todos nuestros clientes asesoría integral, desde la selección hasta la instalación y mantenimiento.</h5>
+								<p style="color:#000;">
+									<i class="icon-check" style="color:#4ED199;"></i> Selección &amp; compatibilidad de productos<br>
+									<i class="icon-check" style="color:#4ED199;"></i> Venta &amp; envío de mercancía<br>
+									<i class="icon-check" style="color:#4ED199;"></i> Instalación de equipos<br>
+									<i class="icon-check" style="color:#4ED199;"></i> Capacitación &amp; mantenimiento
+								</p>
+								<hr class="no_line" style="margin:0 auto 45px auto">
+								<a class="button button_size_2 button_theme" href="contacto.php"><span class="button_label">CONTÁCTANOS</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			
+			
 			<!-- Slider de productos/servicios -->
 			<!-- Slider de productos/servicios -->
 			<div id="slide-about" class="section" style="padding-bottom:55px">
@@ -452,54 +455,54 @@ require 'partials/head.php';
 						<?php
 						$about_slides = [
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-CONTACTOR.png',
-								'title'  => 'Contactores y Arrancadores',
-								'tag'    => 'COMPONENTES ELÉCTRICOS',
-								'desc'   => 'Distribuimos contactores industriales, arrancadores directos y estrella-triángulo para el control confiable de motores eléctricos en cualquier aplicación.',
+								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-AJUSTES-1.png',
+								'title'  => 'Regulador de Alta Presión',
+								'tag'    => 'IDEAL PARA: Sopladores de plástico',
+								'desc'   => 'Presión de entrada hasta 35 bares · Rango de salida 0.5–35 bar ajustable · Material: Aluminio · Conexiones NPT · Incluye manómetro integrado para monitoreo en tiempo real.',
 								'label1' => 'COTIZAR AHORA',
 								'href1'  => 'contacto.php',
-								'label2' => 'PROYECTOS',
+								'label2' => 'VER CATÁLOGO',
 								'href2'  => 'proyectos.php',
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-CONTROLADOR-DE-TEMPERATURA.png',
-								'title'  => 'Sistema Neumático Completo',
-								'tag'    => 'NEUMÁTICA INDUSTRIAL',
-								'desc'   => 'Cilindros, actuadores, pistones, unidades FRL y todo lo necesario para tus sistemas de aire comprimido con marcas líderes como SMC, Festo y Parker.',
-								'label1' => 'VER EQUIPOS',
-								'href1'  => 'equipos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-AJUSTES-2.png',
+								'title'  => 'Válvulas de Procesos',
+								'tag'    => 'IDEAL PARA: Industria alimenticia · Química · Vapor · Agua · Procesos automatizados',
+								'desc'   => 'Actuación neumática de doble efecto · Tamaños 3/4" a 2" NPT · Cuerpo y actuador en acero inoxidable · Sellos de Teflón (PTFE) · Alta resistencia a presión y temperatura.',
+								'label1' => 'COTIZAR AHORA',
+								'href1'  => 'contacto.php',
+								'label2' => 'VER CATÁLOGO',
+								'href2'  => 'proyectos.php',
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-INTERRUPTOR-TERMOMAGNETICO.png',
-								'title'  => 'Electroválvulas y Control',
-								'tag'    => 'CONTROL DE FLUIDOS',
-								'desc'   => 'Electroválvulas monoestables, biestables, distribuidores neumáticos e islas de válvulas para el control preciso de tus procesos industriales.',
-								'label1' => 'VER CATÁLOGO',
-								'href1'  => 'proyectos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-AJUSTES-3.png',
+								'title'  => 'Fabricación de Cilindros',
+								'tag'    => 'PRECISIÓN COMPROBADA · CALIDAD CERTIFICADA',
+								'desc'   => 'Larga vida útil incluso en ciclos de trabajo intensivos · Reducción de paros y mantenimiento · Fácil integración en sistemas existentes · Disponibilidad de refacciones y accesorios.',
+								'label1' => 'COTIZAR AHORA',
+								'href1'  => 'contacto.php',
+								'label2' => 'VER CATÁLOGO',
+								'href2'  => 'proyectos.php',
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-RELEVADOR-MECANICO.png',
-								'title'  => 'Automatización Industrial',
-								'tag'    => 'AUTOMATIZACIÓN',
-								'desc'   => 'Módulos pick &amp; place, mesas de transferencia, guías lineales, servomotores y sistemas de visión artificial para optimizar tu línea de producción.',
-								'label1' => 'VER PROYECTOS',
-								'href1'  => 'proyectos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-AJUSTES-4.png',
+								'title'  => 'Sistema de Vacío',
+								'tag'    => 'IDEAL PARA: Pick &amp; Place · Empaque · Automotriz · Electrónica · Manejo de vidrio y plástico',
+								'desc'   => 'Actuación tipo Venturi sin partes móviles · Nivel de vacío hasta -88 kPa · Ventosas en silicón, nitrito o poliuretano · Tiempo de respuesta en milisegundos · Conexiones RC / push-in neumático.',
+								'label1' => 'COTIZAR AHORA',
+								'href1'  => 'contacto.php',
+								'label2' => 'VER CATÁLOGO',
+								'href2'  => 'proyectos.php',
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-TORRETA-LED.png',
-								'title'  => 'Hidráulica de Alta Presión',
-								'tag'    => 'HIDRÁULICA INDUSTRIAL',
-								'desc'   => 'Cilindros hidráulicos, bombas, válvulas y mangueras de alta presión para aplicaciones que requieren fuerzas elevadas con máxima confiabilidad.',
-								'label1' => 'VER EQUIPOS',
-								'href1'  => 'equipos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-AJUSTES-5.png',
+								'title'  => 'Regulador de Baja Presión',
+								'tag'    => 'IDEAL PARA: Instrumentación · Laboratorios · Automatización de precisión · Control de válvulas',
+								'desc'   => 'Baja histéresis y alta repetitibilidad · Diafragma interno de alta sensibilidad · Rango de precisión 0.01 a 0.8 MPa · Material: aluminio de alta calidad · Conexiones RC · Diseño compacto.',
+								'label1' => 'COTIZAR AHORA',
+								'href1'  => 'contacto.php',
+								'label2' => 'VER CATÁLOGO',
+								'href2'  => 'proyectos.php',
 							],
 						];
 						foreach ($about_slides as $slide): ?>

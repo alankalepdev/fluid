@@ -30,7 +30,43 @@ $page_extra_css   = <<<'CSS'
 		.fluidtec-hero-slider { height: 560px; }
 		.fluidtec-hero-slider .slide-content { padding: 0 24px; max-width: 100%; }
 		.fluidtec-hero-slider .slide-title { font-size: 30px; }
-	
+	}
+	.btn-primary-ft { background: #2029BD; color: #fff; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 14px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, transform .2s; display: inline-block; }
+	.btn-primary-ft:hover { background: #141ba7; transform: translateY(-2px); color: #fff; }
+	.btn-outline-ft { background: transparent; color: #fff; border: 2px solid #4ED199; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 12px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, color .25s, transform .2s; display: inline-block; }
+	.btn-outline-ft:hover { background: #4ED199; color: #fff; transform: translateY(-2px); }
+	#about-slider { height: 620px; }
+	#slide-about .swiper-slide { position: relative; background-size: cover; background-position: center right; display: flex; align-items: stretch; }
+	#slide-about .swiper-slide::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.28); z-index: 1; }
+	#slide-about .slide-inner { position: relative; z-index: 2; width: 52%; padding: 32px 48px 32px 80px; display: flex; flex-direction: column; justify-content: space-between; }
+	#slide-about .slide-brand { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; color: #4ED199; text-transform: uppercase; margin-bottom: 4px; }
+	#slide-about .slide-brand-line { width: 40px; height: 2px; background: #4ED199; margin-bottom: 18px; }
+	#slide-about .slide-title { font-family: 'Poppins', sans-serif; font-size: 40px; font-weight: 700; line-height: 1.1; color: #fff; margin: 0 0 4px; }
+	#slide-about .slide-title span { color: #4ED199; display: block; }
+	#slide-about .slide-divider { width: 50px; height: 3px; background: #4ED199; margin: 12px 0; }
+	#slide-about .slide-subtitle { font-family: 'Poppins', sans-serif; font-size: 14px; color: rgba(255,255,255,0.80); font-style: italic; margin-bottom: 10px; }
+	#slide-about .slide-features { list-style: none; padding: 0; margin: 0 0 10px; }
+	#slide-about .slide-features li { font-family: 'Poppins', sans-serif; font-size: 13px; color: rgba(255,255,255,0.82); line-height: 1.85; padding-left: 18px; position: relative; }
+	#slide-about .slide-features li::before { content: '✓'; position: absolute; left: 0; color: #4ED199; font-weight: 700; }
+	#slide-about .slide-ideal { display: flex; gap: 14px; align-items: flex-start; font-family: 'Poppins', sans-serif; font-size: 12px; margin-bottom: 10px; }
+	#slide-about .ideal-label { color: #4ED199; font-weight: 700; letter-spacing: 1px; white-space: nowrap; flex-shrink: 0; }
+	#slide-about .ideal-text { color: rgba(255,255,255,0.75); }
+	#slide-about .slide-specs { border-top: 1px solid rgba(255,255,255,0.18); padding-top: 8px; }
+	#slide-about .spec-row { display: flex; gap: 16px; font-family: 'Poppins', sans-serif; font-size: 12px; padding: 3px 0; }
+	#slide-about .spec-key { color: #4ED199; font-weight: 700; letter-spacing: 1px; min-width: 90px; }
+	#slide-about .spec-val { color: rgba(255,255,255,0.85); }
+	#slide-about .slide-footer { display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif; font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1.5px; text-transform: uppercase; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 8px; margin-top: 6px; }
+	#slide-about .swiper-button-next, #slide-about .swiper-button-prev { width: 50px; height: 50px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); border-radius: 2px; transition: background .25s; }
+	#slide-about .swiper-button-next:hover, #slide-about .swiper-button-prev:hover { background: #2029BD; border-color: #2029BD; }
+	#slide-about .swiper-button-next::after, #slide-about .swiper-button-prev::after { font-size: 16px; color: #fff; font-weight: 700; }
+	#slide-about .swiper-pagination-bullet { background: rgba(255,255,255,0.5); opacity: 1; }
+	#slide-about .swiper-pagination-bullet-active { background: #4ED199; }
+	@media (max-width: 768px) {
+		#about-slider { height: auto; min-height: 560px; }
+		#slide-about .slide-inner { width: 100%; padding: 28px 24px; }
+		#slide-about .slide-title { font-size: 28px; }
+		#slide-about .slide-features li { font-size: 12px; }
+	}
 </style>
 CSS;
 $page_extra_js = <<<'JS'
@@ -264,80 +300,161 @@ require 'partials/head.php';
 						<?php
 						$about_slides = [
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-CONTACTOR.png',
-								'title'  => 'Contactores y Arrancadores',
-								'tag'    => 'COMPONENTES ELÉCTRICOS',
-								'desc'   => 'Distribuimos contactores industriales, arrancadores directos y estrella-triángulo para el control confiable de motores eléctricos en cualquier aplicación.',
-								'label1' => 'COTIZAR AHORA',
-								'href1'  => 'contacto.php',
-								'label2' => 'PROYECTOS',
-								'href2'  => 'proyectos.php',
+								'img'      => 'assets/images/FLUDITEC-BANNER-2-WEB-INTERRUPTOR.png',
+								'title1'   => 'Interruptor',
+								'title2'   => 'Termomagnético',
+								'subtitle' => 'Protección eléctrica en riel DIN',
+								'features' => [
+									'Tipo: interruptor automático termomagnético',
+									'Polos: 1P / 2P / 3P',
+									'Protección térmica contra sobrecarga',
+									'Protección magnética contra cortocircuito',
+									'Capacidad de interrupción alta (según modelo)',
+									'Montaje: riel DIN',
+								],
+								'ideal' => 'AC industrial y residencial',
+								'specs'  => [
+									['POLOS',      '1P / 2P / 3P'],
+									['MONTAJE',    'Riel DIN'],
+									['PROTECCIÓN', 'Sobrecarga + cortocircuito'],
+								],
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-CONTROLADOR-DE-TEMPERATURA.png',
-								'title'  => 'Sistema Neumático Completo',
-								'tag'    => 'NEUMÁTICA INDUSTRIAL',
-								'desc'   => 'Cilindros, actuadores, pistones, unidades FRL y todo lo necesario para tus sistemas de aire comprimido con marcas líderes como SMC, Festo y Parker.',
-								'label1' => 'VER EQUIPOS',
-								'href1'  => 'equipos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'      => 'assets/images/FLUDITEC-BANNER-2-WEB-CONTACTOR.png',
+								'title1'   => 'Contactor',
+								'title2'   => 'Electromagnético',
+								'subtitle' => 'Control de potencia para motores y tableros',
+								'features' => [
+									'Tipo: contactor electromagnético',
+									'Polos: 3P (trifásico)',
+									'Bobina de control: 24V / 110V / 220V',
+									'Alta capacidad de conmutación',
+									'Contactos auxiliares disponibles',
+									'Diseño compacto para tableros',
+								],
+								'ideal' => 'Arranque de motores • Sistemas automatizados • Tableros de control • Industria en general',
+								'specs'  => [
+									['POLOS',  '3P trifásico'],
+									['BOBINA', '24V / 110V / 220V'],
+									['USO',    'Arranque de motores'],
+								],
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-INTERRUPTOR-TERMOMAGNETICO.png',
-								'title'  => 'Electroválvulas y Control',
-								'tag'    => 'CONTROL DE FLUIDOS',
-								'desc'   => 'Electroválvulas monoestables, biestables, distribuidores neumáticos e islas de válvulas para el control preciso de tus procesos industriales.',
-								'label1' => 'VER CATÁLOGO',
-								'href1'  => 'proyectos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'      => 'assets/images/FLUDITEC-BANNER-2-WEB-TOPRRETA.png',
+								'title1'   => 'Torreta',
+								'title2'   => 'LED',
+								'subtitle' => 'Señalización visual 360° para sistemas industriales',
+								'features' => [
+									'Tipo: torreta luminosa LED multicolor',
+									'Rojo: paro / alarma',
+									'Amarillo: advertencia / proceso',
+									'Verde: operación normal',
+									'Voltaje: 24V / 110V / 220V (según modelo)',
+									'Montaje: base fija o ajustable',
+									'Bajo consumo energético (tecnología LED)',
+								],
+								'ideal' => 'Líneas de producción • Tableros de control • Máquinas automatizadas • Sistemas industriales',
+								'specs'  => [
+									['ROJO',     'Paro / alarma'],
+									['AMARILLO', 'Advertencia'],
+									['VERDE',    'Operación normal'],
+								],
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-RELEVADOR-MECANICO.png',
-								'title'  => 'Automatización Industrial',
-								'tag'    => 'AUTOMATIZACIÓN',
-								'desc'   => 'Módulos pick &amp; place, mesas de transferencia, guías lineales, servomotores y sistemas de visión artificial para optimizar tu línea de producción.',
-								'label1' => 'VER PROYECTOS',
-								'href1'  => 'proyectos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'      => 'assets/images/FLUDITEC-BANNER-2-WEB-CONTROLADOR.png',
+								'title1'   => 'Controlador de',
+								'title2'   => 'Temperatura',
+								'subtitle' => 'Control PID digital para procesos térmicos',
+								'features' => [
+									'Tipo: controlador PID digital',
+									'Pantalla: doble display (PV / SV)',
+									'Control: PID con auto-tuning',
+									'Entradas: termopar / RTD (PT100)',
+									'Salidas: relevador / SSR / analógica',
+									'Alta precisión y estabilidad',
+									'Montaje: panel (tablero eléctrico)',
+								],
+								'ideal' => 'Hornos industriales • Inyección de plástico • Calderas • Procesos térmicos • Automatización',
+								'specs'  => [
+									['CONTROL',  'PID auto-tuning'],
+									['DISPLAY',  'PV / SV'],
+									['ENTRADAS', 'Termopar / RTD'],
+								],
 							],
 							[
-								'img'    => 'assets/images/CUAD-FLUDITEC-BANNER-WEB-TORRETA-LED.png',
-								'title'  => 'Hidráulica de Alta Presión',
-								'tag'    => 'HIDRÁULICA INDUSTRIAL',
-								'desc'   => 'Cilindros hidráulicos, bombas, válvulas y mangueras de alta presión para aplicaciones que requieren fuerzas elevadas con máxima confiabilidad.',
-								'label1' => 'VER EQUIPOS',
-								'href1'  => 'equipos.php',
-								'label2' => 'COTIZAR',
-								'href2'  => 'contacto.php',
+								'img'      => 'assets/images/FLUDITEC-BANNER-2-WEB-RELEVADOR-ESTADO-SOLIDO.png',
+								'title1'   => 'Relevador de',
+								'title2'   => 'Estado Sólido',
+								'subtitle' => 'Conmutación rápida sin contacto mecánico',
+								'features' => [
+									'Tipo: relevador electrónico (SSR)',
+									'Entrada de control: 4–32 VDC / 90–280 VCA',
+									'Salida: 40–480 VCA / 15A–100A (según modelo)',
+									'Conmutación sin contacto mecánico',
+									'Alta velocidad de respuesta',
+									'Montaje en disipador recomendado',
+								],
+								'ideal' => 'Control de resistencias • Hornos • Automatización',
+								'specs'  => [
+									['TIPO',   'SSR electrónico'],
+									['SALIDA', '40–480 VCA'],
+									['RANGO',  '15A – 100A'],
+								],
+							],
+							[
+								'img'      => 'assets/images/FLUDITEC-BANNER-2-WEB-RELEVADOR MECANICO.png',
+								'title1'   => 'Relevador',
+								'title2'   => 'Mecánico',
+								'subtitle' => 'Interfaz eléctrica de fácil reemplazo',
+								'features' => [
+									'Tipo: relevador electromecánico',
+									'Configuración: multipolos (SPDT / DPDT)',
+									'Bobina: 12V / 24V / 110V / 220V',
+									'Base: tipo socket (enchufable)',
+									'Indicador visual de operación',
+									'Fácil reemplazo',
+								],
+								'ideal' => 'Tableros de control • Automatización básica • Interfaces eléctricas • Sistemas industriales',
+								'specs'  => [
+									['CONFIG.', 'SPDT / DPDT'],
+									['BOBINA',  '12V / 24V / 110V / 220V'],
+									['BASE',    'Socket enchufable'],
+								],
 							],
 						];
-						foreach ($about_slides as $slide): ?>
-							<div class="swiper-slide">
-								<div class="container">
-									<div class="row" style="align-items:center">
-										<div class="col-md-6" style="padding:30px 30px 0px 0px">
-											<div class="column_attr clearfix" style="padding:15px 10px 15px 0px;">
-												<div class="image_frame image_item no_link scale-with-grid no_border">
-													<div class="image_wrapper">
-														<img class="scale-with-grid" src="<?= $slide['img'] ?>" alt="<?= htmlspecialchars($slide['title']) ?>" width="780" height="780">
-													</div>
-												</div>
-											</div>
+						foreach ($about_slides as $slide):
+								$imgUrl = str_replace(' ', '%20', $slide['img']);
+							?>
+							<div class="swiper-slide" style="background-image:url('<?= htmlspecialchars($imgUrl, ENT_QUOTES) ?>');">
+								<div class="slide-inner">
+									<div>
+										<div class="slide-brand">Fluidtec México</div>
+										<div class="slide-brand-line"></div>
+										<h2 class="slide-title"><?= htmlspecialchars($slide['title1']) ?><span><?= htmlspecialchars($slide['title2']) ?></span></h2>
+										<div class="slide-divider"></div>
+										<p class="slide-subtitle"><?= htmlspecialchars($slide['subtitle']) ?></p>
+										<ul class="slide-features">
+											<?php foreach ($slide['features'] as $feat): ?>
+												<li><?= htmlspecialchars($feat) ?></li>
+											<?php endforeach; ?>
+										</ul>
+										<div class="slide-ideal">
+											<span class="ideal-label">IDEAL PARA</span>
+											<span class="ideal-text"><?= htmlspecialchars($slide['ideal']) ?></span>
 										</div>
-										<div class="col-md-5" style="padding:40px 2% 0px">
-											<h2><?= $slide['title'] ?></h2>
-											<p><?= $slide['desc'] ?></p>
-											<hr class="no_line" style="margin:0 auto 20px">
-											<div class="column_attr clearfix" style="background-image:url('assets/images/corporation2-icon1.png');background-repeat:no-repeat;background-position:left top;">
-												<h5 style="padding:0px 0px 0px 50px">Selección y compatibilidad de productos para tu industria.</h5>
-												<h6 style="padding:0px 0px 0px 50px"><?= $slide['tag'] ?></h6>
-											</div>
-											<hr class="no_line" style="margin:0 auto 40px auto">
-											<a class="button button_size_2 button_theme" href="<?= $slide['href1'] ?>"><span class="button_label"><?= $slide['label1'] ?></span></a>
-											<a class="button button_size_2" href="<?= $slide['href2'] ?>"><span class="button_label"><?= $slide['label2'] ?></span></a>
+									</div>
+									<div>
+										<div class="slide-specs">
+											<?php foreach ($slide['specs'] as [$key, $val]): ?>
+												<div class="spec-row">
+													<span class="spec-key"><?= htmlspecialchars($key) ?></span>
+													<span class="spec-val"><?= htmlspecialchars($val) ?></span>
+												</div>
+											<?php endforeach; ?>
+										</div>
+										<div class="slide-footer">
+											<span>CALIDAD &bull; CONFIANZA &bull; AUTOMATIZACIÓN</span>
+											<span>fluidtecmexico.com</span>
 										</div>
 									</div>
 								</div>
