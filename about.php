@@ -13,209 +13,45 @@ new Swiper("#about-slider", {
   navigation: { nextEl: "#about-slider .swiper-button-next", prevEl: "#about-slider .swiper-button-prev" },
   pagination: { el: "#about-slider .swiper-pagination", clickable: true }
 });
+(function () {
+  var AUTOPLAY_MS = 6000;
+  var progressEl = document.getElementById("sliderProgress");
+  new Swiper("#fluidtecSwiper", {
+    loop: true, speed: 900, effect: "fade", fadeEffect: { crossFade: true },
+    autoplay: { delay: AUTOPLAY_MS, disableOnInteraction: false },
+    pagination: { el: "#fluidtecSwiper .swiper-pagination", clickable: true },
+    navigation: { nextEl: "#fluidtecSwiper .swiper-button-next", prevEl: "#fluidtecSwiper .swiper-button-prev" },
+    on: {
+      autoplayTimeLeft: function (s, time, progress) {
+        if (progressEl) { progressEl.style.transition = "none"; progressEl.style.width = ((1 - progress) * 100) + "%"; }
+      },
+      slideChangeTransitionStart: function () {
+        if (progressEl) { progressEl.style.transition = "none"; progressEl.style.width = "0%"; }
+      }
+    }
+  });
+})();
 </script>';
 $page_header_extra = '';
 
 require 'partials/head.php';
 ?>
 <style>
-	.fluidtec-hero-slider {
-		position: relative;
-		width: 100%;
-		height: 720px;
-		overflow: hidden;
-	}
-
-	.fluidtec-hero-slider .swiper {
-		width: 100%;
-		height: 100%;
-	}
-
-	.fluidtec-hero-slider .swiper-slide {
-		position: relative;
-		background-size: cover;
-		background-position: center;
-		display: flex;
-		align-items: center;
-	}
-
-	.fluidtec-hero-slider .slide-overlay {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(105deg, rgba(10, 14, 60, 0.82) 0%, rgba(10, 14, 60, 0.45) 60%, rgba(0, 0, 0, 0.15) 100%);
-	}
-
-	.fluidtec-hero-slider .slide-content {
-		position: relative;
-		z-index: 2;
-		padding: 0 80px;
-		max-width: 680px;
-		opacity: 0;
-		transform: translateY(40px);
-		transition: opacity .7s ease .3s, transform .7s ease .3s;
-	}
-
-	.fluidtec-hero-slider .swiper-slide-active .slide-content {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	.fluidtec-hero-slider .slide-tag {
-		display: inline-block;
-		background: #4ED199;
-		color: #fff;
-		font-family: 'Poppins', sans-serif;
-		font-size: 11px;
-		font-weight: 700;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-		padding: 5px 14px;
-		border-radius: 2px;
-		margin-bottom: 22px;
-	}
-
-	.fluidtec-hero-slider .slide-title {
-		font-family: 'Poppins', sans-serif;
-		font-size: 48px;
-		font-weight: 700;
-		line-height: 1.15;
-		color: #fff;
-		margin-bottom: 18px;
-	}
-
-	.fluidtec-hero-slider .slide-title span {
-		color: #4ED199;
-	}
-
-	.fluidtec-hero-slider .slide-desc {
-		font-family: 'Poppins', sans-serif;
-		font-size: 16px;
-		color: rgba(255, 255, 255, 0.82);
-		line-height: 1.7;
-		margin-bottom: 36px;
-		max-width: 520px;
-	}
-
-	.fluidtec-hero-slider .slide-btns {
-		display: flex;
-		gap: 14px;
-		flex-wrap: wrap;
-	}
-
-	.fluidtec-hero-slider .btn-primary-ft {
-		background: #2029BD;
-		color: #fff;
-		font-family: 'Poppins', sans-serif;
-		font-size: 13px;
-		font-weight: 700;
-		letter-spacing: 1.5px;
-		padding: 14px 32px;
-		border-radius: 2px;
-		text-decoration: none;
-		text-transform: uppercase;
-		transition: background .25s, transform .2s;
-		display: inline-block;
-	}
-
-	.fluidtec-hero-slider .btn-primary-ft:hover {
-		background: #141ba7;
-		transform: translateY(-2px);
-	}
-
-	.fluidtec-hero-slider .btn-outline-ft {
-		background: transparent;
-		color: #fff;
-		border: 2px solid #4ED199;
-		font-family: 'Poppins', sans-serif;
-		font-size: 13px;
-		font-weight: 700;
-		letter-spacing: 1.5px;
-		padding: 12px 32px;
-		border-radius: 2px;
-		text-decoration: none;
-		text-transform: uppercase;
-		transition: background .25s, color .25s, transform .2s;
-		display: inline-block;
-	}
-
-	.fluidtec-hero-slider .btn-outline-ft:hover {
-		background: #4ED199;
-		color: #fff;
-		transform: translateY(-2px);
-	}
-
-	.fluidtec-hero-slider .swiper-button-next,
-	.fluidtec-hero-slider .swiper-button-prev {
-		width: 50px;
-		height: 50px;
-		background: rgba(255, 255, 255, 0.12);
-		border: 1px solid rgba(255, 255, 255, 0.3);
-		border-radius: 2px;
-		transition: background .25s;
-	}
-
-	.fluidtec-hero-slider .swiper-button-next:hover,
-	.fluidtec-hero-slider .swiper-button-prev:hover {
-		background: #2029BD;
-		border-color: #2029BD;
-	}
-
-	.fluidtec-hero-slider .swiper-button-next::after,
-	.fluidtec-hero-slider .swiper-button-prev::after {
-		font-size: 16px;
-		color: #fff;
-		font-weight: 700;
-	}
-
-	.fluidtec-hero-slider .swiper-pagination-bullet {
-		width: 10px;
-		height: 10px;
-		background: rgba(255, 255, 255, 0.5);
-		opacity: 1;
-	}
-
-	.fluidtec-hero-slider .swiper-pagination-bullet-active {
-		background: #4ED199;
-	}
-
-	.fluidtec-hero-slider .slider-progress {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		height: 4px;
-		background: #4ED199;
-		z-index: 10;
-		width: 0%;
-		transition: width linear;
-	}
-
-	@media (max-width: 768px) {
-		.fluidtec-hero-slider {
-			height: 560px;
-		}
-
-		.fluidtec-hero-slider .slide-content {
-			padding: 0 24px;
-			max-width: 100%;
-		}
-
-		.fluidtec-hero-slider .slide-title {
-			font-size: 30px;
-		}
-	}
 	.mvov-card {
 		position: relative;
 		overflow: hidden;
 		border-radius: 8px;
-		box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 		transition: transform 0.3s, box-shadow 0.3s;
 		margin-bottom: 30px;
 		background: #fff;
 	}
+
 	.mvov-card:hover {
 		transform: translateY(-5px);
-		box-shadow: 0 8px 30px rgba(32,41,189,0.15);
+		box-shadow: 0 8px 30px rgba(32, 41, 189, 0.15);
 	}
+
 	.mvov-card-header {
 		background: linear-gradient(135deg, #001F5C 0%, #2029BD 100%);
 		padding: 40px 30px;
@@ -223,16 +59,19 @@ require 'partials/head.php';
 		align-items: center;
 		justify-content: center;
 	}
+
 	.mvov-card-body {
 		padding: 28px 24px;
 		text-align: center;
 	}
+
 	.mvov-card-body h3 {
 		font-size: 34px;
 		font-weight: 700;
 		color: #2029BD;
 		margin-bottom: 12px;
 	}
+
 	.mvov-card-body p {
 		font-size: 20px;
 		color: #666;
@@ -259,7 +98,7 @@ require 'partials/head.php';
 				</div>
 			</div>
 			<!-- Misión, Visión, Objetivos y Valores -->
-			<div class="section" style="padding-top:60px;padding-bottom:60px; padding-left: 15%; padding-right: 15%; background:#f4f6fb;">
+			<div class="section" style="padding-top:60px;padding-bottom:60px; padding-left: 10%; padding-right: 10%; background:#f4f6fb;">
 				<div>
 					<div class="row">
 						<div class="col-12 text-center" style="margin-bottom:50px">
@@ -272,9 +111,9 @@ require 'partials/head.php';
 							<div class="mvov-card">
 								<div class="mvov-card-header">
 									<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
-										<circle cx="12" cy="12" r="10"/>
-										<circle cx="12" cy="12" r="6"/>
-										<circle cx="12" cy="12" r="2"/>
+										<circle cx="12" cy="12" r="10" />
+										<circle cx="12" cy="12" r="6" />
+										<circle cx="12" cy="12" r="2" />
 									</svg>
 								</div>
 								<div class="mvov-card-body">
@@ -287,8 +126,8 @@ require 'partials/head.php';
 							<div class="mvov-card">
 								<div class="mvov-card-header">
 									<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
-										<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-										<circle cx="12" cy="12" r="3"/>
+										<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+										<circle cx="12" cy="12" r="3" />
 									</svg>
 								</div>
 								<div class="mvov-card-body">
@@ -301,7 +140,7 @@ require 'partials/head.php';
 							<div class="mvov-card">
 								<div class="mvov-card-header">
 									<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
-										<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+										<polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
 									</svg>
 								</div>
 								<div class="mvov-card-body">
@@ -314,7 +153,7 @@ require 'partials/head.php';
 							<div class="mvov-card">
 								<div class="mvov-card-header">
 									<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
-										<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+										<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
 									</svg>
 								</div>
 								<div class="mvov-card-body">
@@ -327,8 +166,8 @@ require 'partials/head.php';
 				</div>
 			</div>
 			<!-- Modelo de negocio y experiencia -->
-			 <div class="section" style="padding-bottom:55px">
-				<div class="container">
+			<div class="section" style="padding-bottom:55px">
+				<div style="width:100%;padding:0 10%;">
 					<div class="row">
 						<div class="col-12">
 							<hr class="no_line" style="margin:0 auto 70px">
@@ -346,24 +185,24 @@ require 'partials/head.php';
 							<hr class="no_line" style="margin:0 auto 20px">
 							<div class="row" style="text-align:center;margin-bottom:20px;">
 								<div class="col-md-3 col-6" style="padding:10px;">
-									<i class="icon-cog-line" style="font-size:32px;color:#2029BD;"></i>
-									<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Selección y<br>compatibilidad</p>
-									<p style="font-size:11px;color:#777;">Elegimos los componentes ideales para cada aplicación.</p>
+									<i class="icon-cog-line" style="font-size:40px;color:#2029BD;"></i>
+									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Selección y<br>compatibilidad</p>
+									<p style="font-size:13px;color:#777;">Elegimos los componentes ideales para cada aplicación.</p>
 								</div>
 								<div class="col-md-3 col-6" style="padding:10px;">
-									<i class="icon-truck-line" style="font-size:32px;color:#2029BD;"></i>
-									<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Envío inmediato</p>
-									<p style="font-size:11px;color:#777;">Stock disponible y logística rápida para minimizar tiempos de paro.</p>
+									<i class="icon-truck-line" style="font-size:40px;color:#2029BD;"></i>
+									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Envío inmediato</p>
+									<p style="font-size:13px;color:#777;">Stock disponible y logística rápida para minimizar tiempos de paro.</p>
 								</div>
 								<div class="col-md-3 col-6" style="padding:10px;">
-									<i class="icon-tools" style="font-size:32px;color:#2029BD;"></i>
-									<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Instalación y puesta<br>en marcha</p>
-									<p style="font-size:11px;color:#777;">Especialistas presentes para un arranque seguro y eficiente.</p>
+									<i class="icon-tools" style="font-size:40px;color:#2029BD;"></i>
+									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Instalación y puesta<br>en marcha</p>
+									<p style="font-size:13px;color:#777;">Especialistas presentes para un arranque seguro y eficiente.</p>
 								</div>
 								<div class="col-md-3 col-6" style="padding:10px;">
-									<i class="icon-phone" style="font-size:32px;color:#2029BD;"></i>
-									<p style="font-size:12px;font-weight:700;margin:8px 0 4px;">Mantenimiento<br>y soporte</p>
-									<p style="font-size:11px;color:#777;">Acompañamiento continuo para garantizar la operación.</p>
+									<i class="icon-phone" style="font-size:40px;color:#2029BD;"></i>
+									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Mantenimiento<br>y soporte</p>
+									<p style="font-size:13px;color:#777;">Acompañamiento continuo para garantizar la operación.</p>
 								</div>
 							</div>
 							<hr class="no_line" style="margin:0 auto 20px auto">
@@ -374,7 +213,7 @@ require 'partials/head.php';
 							<hr class="no_line" style="margin:0 auto 70px">
 						</div>
 					</div>
-				</div>
+				</div><!-- /10% padding wrapper -->
 			</div>
 
 			<div class="section" style="padding-top:78px;padding-bottom:3px">
@@ -438,8 +277,8 @@ require 'partials/head.php';
 					</div>
 				</div>
 			</div> -->
-			
-			
+
+
 			<!-- Slider de productos/servicios -->
 			<!-- Slider de productos/servicios -->
 			<div id="slide-about" class="section" style="padding-bottom:55px">
@@ -547,6 +386,93 @@ require 'partials/head.php';
 					</div>
 				</div>
 			</div>
+
+			<!-- Hero Slider -->
+			<!-- ── Fluidtec Hero Slider (Swiper.js) ── -->
+			<div class="fluidtec-hero-slider">
+				<div class="swiper" id="fluidtecSwiper">
+					<div class="swiper-wrapper">
+
+						<!-- Slide 1 – Componentes Industriales -->
+						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-1.png');">
+							<div class="slide-overlay"></div>
+							<div class="slide-content">
+								<span class="slide-tag">Proyectos Industriales</span>
+								<h1 class="slide-title">Soluciones a medida<br><span>para líneas de producción</span></h1>
+								<p class="slide-desc">Desarrollamos propuestas integrales en neumática y automatización para mejorar la productividad y continuidad de tus procesos.</p>
+								<div class="slide-btns">
+									<a href="https://wa.me/525514737265" class="btn-primary-ft">Cotizar Ahora</a>
+									<a href="about.php" class="btn-outline-ft">CONOCER MÁS</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide 2 – Equipo Neumático -->
+						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-2.png');">
+							<div class="slide-overlay"></div>
+							<div class="slide-content">
+								<span class="slide-tag">EMPRESAS DE CONFIANZA</span>
+								<h1 class="slide-title">Trabajamos con la<span> industria</span> que<br> mueve a<span> México</span></h1>
+								<p class="slide-desc">Soluciones confiables en acero inoxidable para sistemas de automatización industrial.</p>
+								<div class="slide-btns">
+									<a href="equipos.php" class="btn-primary-ft">Ver Proyectos</a>
+									<a href="contacto.php" class="btn-outline-ft">Contactar</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide 3 – Precios Competitivos -->
+						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-3.png');">
+							<div class="slide-overlay"></div>
+							<div class="slide-content">
+								<span class="slide-tag">ASESORÍA PERSONALIZADA</span>
+								<h1 class="slide-title"><span>Soporte técnico</span><br> para cada <br><span>proyecto</span></h1>
+								<p class="slide-desc">La mejor opción para el control de temperatura en procesos industriales.</p>
+								<div class="slide-btns">
+									<a href="https://wa.me/525514737265" class="btn-primary-ft">Solicitar asesoría</a>
+									<a href="proyectos.php" class="btn-outline-ft">Quiénes somos</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide 4 – Empresas de Confianza -->
+						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-4.png');">
+							<div class="slide-overlay"></div>
+							<div class="slide-content">
+								<span class="slide-tag">COMPONENTES neumáticOS</span>
+								<h1 class="slide-title">Conexiones y <br><span>control </span> de alta <br><span>precisión</span></h1>
+								<p class="slide-desc">Encuentra válvulas, racores, mangueras y accesorios diseñados para optimixar el rendimiento de tus sistemas industriales.</p>
+								<div class="slide-btns">
+									<a href="proyectos.php" class="btn-primary-ft">Ver catálogo</a>
+									<a href="contacto.php" class="btn-outline-ft">Contactar</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slide 5 – Soporte Técnico -->
+						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-5.png');">
+							<div class="slide-overlay"></div>
+							<div class="slide-content">
+								<span class="slide-tag">Soluciones industriales</span>
+								<h1 class="slide-title">Tecnología para la <br> <span>automatización</span> <br> de tus <span>procesos</span></h1>
+								<p class="slide-desc">Impulsamos a la industria con componentes neumáticos, control y soporte técnico confiable para cada aplicación.</p>
+								<div class="slide-btns">
+									<a href="https://wa.me/525514737265" class="btn-primary-ft">Contactar Soporte</a>
+									<a href="about.php" class="btn-outline-ft">Quiénes Somos</a>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- /swiper-wrapper -->
+
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
+					<div class="slider-progress" id="sliderProgress"></div>
+				</div>
+			</div>
+
+
 		</div>
 
 		<?php require 'partials/footer.php'; ?>

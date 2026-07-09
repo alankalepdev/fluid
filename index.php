@@ -3,72 +3,7 @@ $page_title       = 'Fluidtec México | Componentes Industriales & Automatizaci�
 $page_description = 'Distribuidores de componentes industriales y equipo de automatización. Electroválvulas, pistones, conectores neumáticos y más con envío inmediato.';
 $page_body_class  = 'home page template-slider style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
 $page_id          = 'index';
-$page_extra_css   = <<<'CSS'
-<style>
-	.fluidtec-hero-slider { position: relative; width: 100%; height: 720px; overflow: hidden; }
-	.fluidtec-hero-slider .swiper { width: 100%; height: 100%; }
-	.fluidtec-hero-slider .swiper-slide { position: relative; background-size: cover; background-position: center; display: flex; align-items: center; }
-	.fluidtec-hero-slider .slide-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(10,14,60,0.82) 0%, rgba(10,14,60,0.45) 60%, rgba(0,0,0,0.15) 75%); }
-	.fluidtec-hero-slider .slide-content { position: relative; z-index: 2; padding: 0 80px; max-width: 680px; opacity: 0; transform: translateY(40px); transition: opacity .7s ease .3s, transform .7s ease .3s; }
-	.fluidtec-hero-slider .swiper-slide-active .slide-content { opacity: 1; transform: translateY(0); }
-	.fluidtec-hero-slider .slide-tag { display: inline-block; background: #4ED199; color: #fff; font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 22px; }
-	.fluidtec-hero-slider .slide-title { font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 18px; }
-	.fluidtec-hero-slider .slide-title span { color: #4ED199; }
-	.fluidtec-hero-slider .slide-desc { font-family: 'Poppins', sans-serif; font-size: 16px; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 36px; max-width: 520px; }
-	.fluidtec-hero-slider .slide-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-	.fluidtec-hero-slider .btn-primary-ft { background: #2029BD; color: #fff; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 14px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, transform .2s; display: inline-block; }
-	.fluidtec-hero-slider .btn-primary-ft:hover { background: #141ba7; transform: translateY(-2px); }
-	.fluidtec-hero-slider .btn-outline-ft { background: transparent; color: #fff; border: 2px solid #4ED199; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 12px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, color .25s, transform .2s; display: inline-block; }
-	.fluidtec-hero-slider .btn-outline-ft:hover { background: #4ED199; color: #fff; transform: translateY(-2px); }
-	.fluidtec-hero-slider .swiper-button-next, .fluidtec-hero-slider .swiper-button-prev { width: 50px; height: 50px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); border-radius: 2px; transition: background .25s; }
-	.fluidtec-hero-slider .swiper-button-next:hover, .fluidtec-hero-slider .swiper-button-prev:hover { background: #2029BD; border-color: #2029BD; }
-	.fluidtec-hero-slider .swiper-button-next::after, .fluidtec-hero-slider .swiper-button-prev::after { font-size: 16px; color: #fff; font-weight: 700; }
-	.fluidtec-hero-slider .swiper-pagination-bullet { width: 10px; height: 10px; background: rgba(255,255,255,0.5); opacity: 1; }
-	.fluidtec-hero-slider .swiper-pagination-bullet-active { background: #4ED199; }
-	.fluidtec-hero-slider .slider-progress { position: absolute; bottom: 0; left: 0; height: 4px; background: #4ED199; z-index: 10; width: 0%; transition: width linear; }
-	@media (max-width: 768px) {
-		.fluidtec-hero-slider { height: 560px; }
-		.fluidtec-hero-slider .slide-content { padding: 0 24px; max-width: 100%; }
-		.fluidtec-hero-slider .slide-title { font-size: 30px; }
-	}
-	.btn-primary-ft { background: #2029BD; color: #fff; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 14px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, transform .2s; display: inline-block; }
-	.btn-primary-ft:hover { background: #141ba7; transform: translateY(-2px); color: #fff; }
-	.btn-outline-ft { background: transparent; color: #fff; border: 2px solid #4ED199; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; padding: 12px 32px; border-radius: 2px; text-decoration: none; text-transform: uppercase; transition: background .25s, color .25s, transform .2s; display: inline-block; }
-	.btn-outline-ft:hover { background: #4ED199; color: #fff; transform: translateY(-2px); }
-	#about-slider { height: 620px; }
-	#slide-about .swiper-slide { position: relative; background-size: cover; background-position: center right; display: flex; align-items: stretch; }
-	#slide-about .swiper-slide::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.28); z-index: 1; }
-	#slide-about .slide-inner { position: relative; z-index: 2; width: 52%; padding: 32px 48px 32px 80px; display: flex; flex-direction: column; justify-content: space-between; }
-	#slide-about .slide-brand { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; color: #4ED199; text-transform: uppercase; margin-bottom: 4px; }
-	#slide-about .slide-brand-line { width: 40px; height: 2px; background: #4ED199; margin-bottom: 18px; }
-	#slide-about .slide-title { font-family: 'Poppins', sans-serif; font-size: 40px; font-weight: 700; line-height: 1.1; color: #fff; margin: 0 0 4px; }
-	#slide-about .slide-title span { color: #4ED199; display: block; }
-	#slide-about .slide-divider { width: 50px; height: 3px; background: #4ED199; margin: 12px 0; }
-	#slide-about .slide-subtitle { font-family: 'Poppins', sans-serif; font-size: 14px; color: rgba(255,255,255,0.80); font-style: italic; margin-bottom: 10px; }
-	#slide-about .slide-features { list-style: none; padding: 0; margin: 0 0 10px; }
-	#slide-about .slide-features li { font-family: 'Poppins', sans-serif; font-size: 13px; color: rgba(255,255,255,0.82); line-height: 1.85; padding-left: 18px; position: relative; }
-	#slide-about .slide-features li::before { content: '✓'; position: absolute; left: 0; color: #4ED199; font-weight: 700; }
-	#slide-about .slide-ideal { display: flex; gap: 14px; align-items: flex-start; font-family: 'Poppins', sans-serif; font-size: 12px; margin-bottom: 10px; }
-	#slide-about .ideal-label { color: #4ED199; font-weight: 700; letter-spacing: 1px; white-space: nowrap; flex-shrink: 0; }
-	#slide-about .ideal-text { color: rgba(255,255,255,0.75); }
-	#slide-about .slide-specs { border-top: 1px solid rgba(255,255,255,0.18); padding-top: 8px; }
-	#slide-about .spec-row { display: flex; gap: 16px; font-family: 'Poppins', sans-serif; font-size: 12px; padding: 3px 0; }
-	#slide-about .spec-key { color: #4ED199; font-weight: 700; letter-spacing: 1px; min-width: 90px; }
-	#slide-about .spec-val { color: rgba(255,255,255,0.85); }
-	#slide-about .slide-footer { display: flex; justify-content: space-between; font-family: 'Poppins', sans-serif; font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1.5px; text-transform: uppercase; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 8px; margin-top: 6px; }
-	#slide-about .swiper-button-next, #slide-about .swiper-button-prev { width: 50px; height: 50px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); border-radius: 2px; transition: background .25s; }
-	#slide-about .swiper-button-next:hover, #slide-about .swiper-button-prev:hover { background: #2029BD; border-color: #2029BD; }
-	#slide-about .swiper-button-next::after, #slide-about .swiper-button-prev::after { font-size: 16px; color: #fff; font-weight: 700; }
-	#slide-about .swiper-pagination-bullet { background: rgba(255,255,255,0.5); opacity: 1; }
-	#slide-about .swiper-pagination-bullet-active { background: #4ED199; }
-	@media (max-width: 768px) {
-		#about-slider { height: auto; min-height: 560px; }
-		#slide-about .slide-inner { width: 100%; padding: 28px 24px; }
-		#slide-about .slide-title { font-size: 28px; }
-		#slide-about .slide-features li { font-size: 12px; }
-	}
-</style>
-CSS;
+$page_extra_css   = '';
 $page_extra_js = <<<'JS'
 <script>
 	(function () {
@@ -77,8 +12,8 @@ $page_extra_js = <<<'JS'
 		var swiper = new Swiper('#fluidtecSwiper', {
 			loop: true, speed: 900, effect: 'fade', fadeEffect: { crossFade: true },
 			autoplay: { delay: AUTOPLAY_MS, disableOnInteraction: false },
-			pagination: { el: '.swiper-pagination', clickable: true },
-			navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+			pagination: { el: '#fluidtecSwiper .swiper-pagination', clickable: true },
+			navigation: { nextEl: '#fluidtecSwiper .swiper-button-next', prevEl: '#fluidtecSwiper .swiper-button-prev' },
 			on: {
 				autoplayTimeLeft: function (s, time, progress) {
 					if (progressEl) { progressEl.style.transition = 'none'; progressEl.style.width = ((1 - progress) * 100) + '%'; }
