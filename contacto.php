@@ -38,7 +38,7 @@ require 'partials/head.php';
 							<div class="column_attr clearfix mobile_align_center">
 								<h6>01</h6>
 								<h3>Dirección</h3>
-								<p>Carretera Cuautitlán-Tlalnepantla No.1,<br>Col. Loma Bonita,<br>Cuautitlán Izcalli C.P. 54759<br>Estado de México, México</p>
+								<p><a href="https://maps.app.goo.gl/4SsphCd7LmDVYacg7" target="_blank"><i class="fa-icon-map-marker"></i>Carretera Cuautitlán-Tlalnepantla No.1,<br>Col. Loma Bonita,<br>Cuautitlán Izcalli C.P. 54759<br>Estado de México, México</a></p>
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -47,13 +47,14 @@ require 'partials/head.php';
 								<h3>Información de contacto</h3>
 								<p>Teléfono: (56) 2011 9180</p>
 								<p>E-mail: <a href="mailto:cotizaciones@fluidtec.mx">cotizaciones@fluidtec.mx</a></p>
+								<a href="https://wa.me/525620119180" class="btn btn-success"><i class="fa-icon-whatsapp"></i> Cotizar por WhatsApp</a>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="column_attr clearfix mobile_align_center">
 								<h6>03</h6>
 								<h3>Horario de atención</h3>
-								<p>Lunes – Viernes: 8AM — 6PM<br>Sábado: 9AM — 2PM</p>
+								<p>Lunes – Viernes: 8AM — 6PM</p>
 							</div>
 						</div>
 					</div>

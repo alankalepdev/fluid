@@ -245,7 +245,23 @@ require 'partials/head.php';
 
 <div id="Content">
 	<!-- Hero Section -->
-	<div class="hero-proyectos">
+	 <div class="section mcb-section no-margin-h full-width">
+				<div class="row">
+					<div class="col-md-6 text-center" style="background-color:#e7e9ee">
+						<div class="mt-5">
+							<i class="icon-cog" style="font-size:40px;color:#2029bd;"></i>
+							<h2><span style="color:#2029bd;">Proyectos<br>Industriales</span></h2>
+							<p style="color:#666;max-width:350px;margin:0 auto;">Integramos automatización, control eléctrico, neumática e ingeniería aplicada para soluciones reales en planta.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+							<div class="image_wrapper"><img class="scale-with-grid" src="assets/images/IM_02.png" alt="Equipos Fluidtec" width="960" height="360"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<!-- <div class="hero-proyectos">
 		<div class="container hero-proyectos-content">
 			<div class="row">
 				<div class="col-lg-7">
@@ -271,7 +287,7 @@ require 'partials/head.php';
 			</div>
 		</div>
 		<img src="assets/images/corporation2-sectionbg1.jpg" alt="Proyectos" class="hero-image">
-	</div>
+	</div> -->
 
 	<!-- Resultados y casos de éxito -->
 	<div id="casos" class="section" style="padding: 80px 0;">

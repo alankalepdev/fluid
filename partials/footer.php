@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="column one">
 				<a id="back_to_top" class="footer_button" href="#"><i class="icon-up-open-big"></i></a>
-				<div class="copyright">&copy; 2025 - Fluidtec México. Componentes Industriales &amp; Automatización.</div>
+				<div class="copyright">&copy; 2026 - Fluidtec México. Componentes Industriales &amp; Automatización. <a target="_blank" href="https://alankalepdev.com"> By AlanKalepDev</a></div>
 				<nav id="social-menu" class="menu-footer-container">
 					<ul id="menu-footer" class="social-menu">
 						<li><a href="about.php">Nosotros</a></li>

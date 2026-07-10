@@ -11,7 +11,7 @@
 					<h1 class="slide-title">Soluciones a medida<br><span>para líneas de producción</span></h1>
 					<p class="slide-desc">Desarrollamos propuestas integrales en neumática y automatización para mejorar la productividad y continuidad de tus procesos.</p>
 					<div class="slide-btns">
-						<a href="https://wa.me/525514737265" class="btn-primary-ft">Cotizar Ahora</a>
+						<a href="https://wa.me/525620119180" class="btn-primary-ft">Cotizar Ahora</a>
 						<a href="about.php" class="btn-outline-ft">CONOCER MÁS</a>
 					</div>
 				</div>
@@ -39,7 +39,7 @@
 					<h1 class="slide-title"><span>Soporte técnico</span><br> para cada <br><span>proyecto</span></h1>
 					<p class="slide-desc">La mejor opción para el control de temperatura en procesos industriales.</p>
 					<div class="slide-btns">
-						<a href="https://wa.me/525514737265" class="btn-primary-ft">Solicitar asesoría</a>
+						<a href="https://wa.me/525620119180" class="btn-primary-ft">Solicitar asesoría</a>
 						<a href="proyectos.php" class="btn-outline-ft">Quiénes somos</a>
 					</div>
 				</div>
@@ -67,7 +67,7 @@
 					<h1 class="slide-title">Tecnología para la <br> <span>automatización</span> <br> de tus <span>procesos</span></h1>
 					<p class="slide-desc">Impulsamos a la industria con componentes neumáticos, control y soporte técnico confiable para cada aplicación.</p>
 					<div class="slide-btns">
-						<a href="https://wa.me/525514737265" class="btn-primary-ft">Contactar Soporte</a>
+						<a href="https://wa.me/525620119180" class="btn-primary-ft">Contactar Soporte</a>
 						<a href="about.php" class="btn-outline-ft">Quiénes Somos</a>
 					</div>
 				</div>

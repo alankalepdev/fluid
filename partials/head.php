@@ -32,6 +32,8 @@
 	<link rel='stylesheet' href='assets/css/corporation2.css'>
 	<!-- Swiper Slider -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/plugins/rs-plugin/fonts/font-awesome/css/font-awesome.css">
 	<!-- Custom global styles -->
 	<link rel="stylesheet" href="assets/css/custom.css">
 	<?= $page_extra_css ?? '' ?>
