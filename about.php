@@ -186,23 +186,23 @@ require 'partials/head.php';
 							<div class="row" style="text-align:center;margin-bottom:20px;">
 								<div class="col-md-3 col-6" style="padding:10px;">
 									<i class="icon-cog-line" style="font-size:40px;color:#2029BD;"></i>
-									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Selección y<br>compatibilidad</p>
-									<p style="font-size:13px;color:#777;">Elegimos los componentes ideales para cada aplicación.</p>
+									<p style="font-size:20px;font-weight:700;margin:10px 0 6px;">Selección y<br>compatibilidad</p>
+									<p style="font-size:16px;color:#777;">Elegimos los componentes ideales para cada aplicación.</p>
 								</div>
 								<div class="col-md-3 col-6" style="padding:10px;">
 									<i class="icon-truck-line" style="font-size:40px;color:#2029BD;"></i>
-									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Envío inmediato</p>
-									<p style="font-size:13px;color:#777;">Stock disponible y logística rápida para minimizar tiempos de paro.</p>
+									<p style="font-size:20px;font-weight:700;margin:10px 0 6px;">Envío inmediato</p>
+									<p style="font-size:16px;color:#777;">Stock disponible y logística rápida para minimizar tiempos de paro.</p>
 								</div>
 								<div class="col-md-3 col-6" style="padding:10px;">
 									<i class="icon-tools" style="font-size:40px;color:#2029BD;"></i>
-									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Instalación y puesta<br>en marcha</p>
-									<p style="font-size:13px;color:#777;">Especialistas presentes para un arranque seguro y eficiente.</p>
+									<p style="font-size:20px;font-weight:700;margin:10px 0 6px;">Instalación y puesta<br>en marcha</p>
+									<p style="font-size:16px;color:#777;">Especialistas presentes para un arranque seguro y eficiente.</p>
 								</div>
 								<div class="col-md-3 col-6" style="padding:10px;">
 									<i class="icon-phone" style="font-size:40px;color:#2029BD;"></i>
-									<p style="font-size:15px;font-weight:700;margin:10px 0 6px;">Mantenimiento<br>y soporte</p>
-									<p style="font-size:13px;color:#777;">Acompañamiento continuo para garantizar la operación.</p>
+									<p style="font-size:20px;font-weight:700;margin:10px 0 6px;">Mantenimiento<br>y soporte</p>
+									<p style="font-size:16px;color:#777;">Acompañamiento continuo para garantizar la operación.</p>
 								</div>
 							</div>
 							<hr class="no_line" style="margin:0 auto 20px auto">
@@ -281,7 +281,7 @@ require 'partials/head.php';
 
 			<!-- Slider de productos/servicios -->
 			<!-- Slider de productos/servicios -->
-			<div id="slide-about" class="section" style="padding-bottom:55px">
+			<!-- <div id="slide-about" class="section" style="padding-bottom:55px">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -385,7 +385,7 @@ require 'partials/head.php';
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- Hero Slider -->
 			<!-- ── Fluidtec Hero Slider (Swiper.js) ── -->

@@ -18,9 +18,11 @@ require 'partials/head.php';
 			<div class="section mcb-section no-margin-h full-width">
 				<div class="row">
 					<div class="col-md-6 text-center mt-4" style="background-color:#e7e9ee">
-						<i class="icon-mail" style="font-size:40px;color:#2029bd;"></i>
-						<h2><span style="color:#2029bd;">Contáctanos,<br>estamos aquí</span></h2>
-						<p style="color:#666;max-width:350px;margin:0 auto;">Cotizaciones, soporte técnico y ventas. Respondemos en menos de 24 horas.</p>
+						<div class="mt-5">
+							<i class="icon-mail" style="font-size:40px;color:#2029bd;"></i>
+							<h2><span style="color:#2029bd;">Contáctanos,<br>estamos aquí</span></h2>
+							<p style="color:#666;max-width:350px;margin:0 auto;">Cotizaciones, soporte técnico y ventas. Respondemos en menos de 24 horas.</p>
+						</div>
 					</div>
 					<div class="col-md-6" style="padding:0;">
 						<div style="background:linear-gradient(135deg,#2029BD 0%,#4ED199 100%);display:flex;align-items:center;justify-content:center;">
@@ -35,14 +37,14 @@ require 'partials/head.php';
 				<div class="container">
 					<div class="row" style="padding:85px 0px 105px 0px;">
 						<div class="col-md-4">
-							<div class="column_attr clearfix mobile_align_center">
+							<div class="column_attr clearfix mobile_align_center alert alert-primary">
 								<h6>01</h6>
 								<h3>Dirección</h3>
-								<p><a href="https://maps.app.goo.gl/4SsphCd7LmDVYacg7" target="_blank"><i class="fa-icon-map-marker"></i>Carretera Cuautitlán-Tlalnepantla No.1,<br>Col. Loma Bonita,<br>Cuautitlán Izcalli C.P. 54759<br>Estado de México, México</a></p>
+								<p><a href="https://maps.app.goo.gl/4SsphCd7LmDVYacg7" target="_blank" class="btn btn-primary"><i class="fa-icon-map-marker"></i> Carretera Cuautitlán-Tlalnepantla No.1,<br>Col. Loma Bonita, C.P. 54759</a></p>
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="column_attr clearfix mobile_align_center">
+							<div class="column_attr clearfix mobile_align_center alert alert-success">
 								<h6>02</h6>
 								<h3>Información de contacto</h3>
 								<p>Teléfono: (56) 2011 9180</p>
@@ -51,7 +53,7 @@ require 'partials/head.php';
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="column_attr clearfix mobile_align_center">
+							<div class="column_attr clearfix mobile_align_center alert alert-primary">
 								<h6>03</h6>
 								<h3>Horario de atención</h3>
 								<p>Lunes – Viernes: 8AM — 6PM</p>

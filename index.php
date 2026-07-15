@@ -68,33 +68,37 @@ new Swiper("#about-slider", {
     var btns  = document.querySelectorAll('.cat-filter-btn');
     var cards = document.querySelectorAll('.prod-card-col');
 
+    function applyFilter(filter) {
+        cards.forEach(function (col) {
+            var match = col.dataset.cat === filter;
+            if (match) {
+                col.style.display = 'flex';
+                col.style.opacity = '0';
+                col.style.transform = 'translateY(12px)';
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        col.style.transition = 'opacity .3s ease, transform .3s ease';
+                        col.style.opacity = '1';
+                        col.style.transform = 'translateY(0)';
+                    });
+                });
+            } else {
+                col.style.transition = 'none';
+                col.style.display = 'none';
+            }
+        });
+    }
+
     btns.forEach(function (btn) {
         btn.addEventListener('click', function () {
             btns.forEach(function (b) { b.classList.remove('active'); });
             btn.classList.add('active');
-
-            var filter = btn.dataset.filter;
-
-            cards.forEach(function (col) {
-                var match = filter === 'all' || col.dataset.cat === filter;
-                if (match) {
-                    col.style.display = 'flex';
-                    col.style.opacity = '0';
-                    col.style.transform = 'translateY(12px)';
-                    requestAnimationFrame(function () {
-                        requestAnimationFrame(function () {
-                            col.style.transition = 'opacity .3s ease, transform .3s ease';
-                            col.style.opacity = '1';
-                            col.style.transform = 'translateY(0)';
-                        });
-                    });
-                } else {
-                    col.style.transition = 'none';
-                    col.style.display = 'none';
-                }
-            });
+            applyFilter(btn.dataset.filter);
         });
     });
+
+    // Aplicar filtro por defecto al cargar
+    applyFilter('neumatico');
 })();
 </script>
 JS;
@@ -122,8 +126,7 @@ require 'partials/head.php';
 							</div>
 							<div class="col-md-6">
 								<div class="cat-filters">
-									<button class="cat-filter-btn active" data-filter="all">Todas las categorías</button>
-									<button class="cat-filter-btn" data-filter="neumatico">Neumático</button>
+									<button class="cat-filter-btn active" data-filter="neumatico">Neumático</button>
 									<button class="cat-filter-btn" data-filter="electrico">Eléctrico</button>
 								</div>
 							</div>
