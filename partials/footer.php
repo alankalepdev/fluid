@@ -12,7 +12,7 @@
 			<div class="col-md-3">
 				<h6 style="color: #737380;">DIRECCIÓN</h6>
 				<h4>MÉXICO</h4>
-				<p>Carretera Cuautitlán - Tlalnepantla No. 1,<br>Col. Loma Bonita<br>Cuautitlan Izcalli, México C.P. 54759</p>
+				<a target="_blank" href="https://maps.app.goo.gl/4SsphCd7LmDVYacg7"><i class="fa-icon-map-marker"></i> Carretera Cuautitlán - Tlalnepantla No. 1,<br>Col. Loma Bonita<br>Cuautitlan Izcalli, México C.P. 54759</a>
 				<a href="mailto:cotizaciones@fluidtec.mx"><span>cotizaciones@fluidtec.mx</span></a>
 			</div>
 			<div class="col-md-3">
