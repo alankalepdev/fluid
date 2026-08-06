@@ -13,6 +13,39 @@ $page_extra_css   = <<<'CSS'
 .cat-filter-btn { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .5px; padding: 8px 18px; border-radius: 4px; border: 1.5px solid #dde1f0; background: #fff; color: #555; cursor: pointer; transition: all .2s; }
 .cat-filter-btn.active, .cat-filter-btn:hover { background: #2029BD; border-color: #2029BD; color: #fff; }
 
+#Content .section > .container { width: 90%; max-width: 1400px; margin: 0 auto; }
+
+/* Banner de ayuda */
+.help-banner { position: sticky; top: 100px; background: linear-gradient(160deg, #001F5C 0%, #2029BD 100%); border-radius: 16px; padding: 30px 26px; color: #fff; }
+.help-banner-icon { width: 54px; height: 54px; border-radius: 12px; background: rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.help-banner-icon i { font-size: 24px; color: #fff; }
+.help-banner h3 { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: #fff; line-height: 1.3; margin: 0 0 12px; }
+.help-banner p.help-banner-lead { color: rgba(255,255,255,.78); font-size: 13.5px; line-height: 1.6; margin: 0 0 22px; }
+.help-banner-actions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+.btn-whatsapp { background: #25D366; color: #fff; font-family: 'Poppins', sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: .3px; padding: 13px 18px; border-radius: 6px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 9px; transition: background .2s; text-transform: uppercase; }
+.btn-whatsapp:hover { background: #1fb857; color: #fff; }
+.btn-whatsapp i { font-size: 17px; }
+.btn-asesoria { background: rgba(255,255,255,.1); color: #fff; font-family: 'Poppins', sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: .3px; padding: 13px 18px; border-radius: 6px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 9px; border: 1.5px solid rgba(255,255,255,.35); transition: background .2s; text-transform: uppercase; }
+.btn-asesoria:hover { background: rgba(255,255,255,.18); color: #fff; }
+.help-banner-features { list-style: none; padding: 0; margin: 0 0 26px; }
+.help-banner-features li { display: flex; align-items: flex-start; gap: 14px; padding: 11px 0; }
+.help-banner-features li i { font-size: 20px; color: #4ED199; flex-shrink: 0; margin-top: 1px; }
+.help-banner-features li strong { display: block; font-size: 13.5px; color: #fff; }
+.help-banner-features li span { display: block; font-size: 12px; color: rgba(255,255,255,.65); }
+.help-banner-contact { background: rgba(255,255,255,.08); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+.help-banner-contact-row { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; }
+.help-banner-contact-row i { font-size: 17px; color: #9db4ff; flex-shrink: 0; margin-top: 2px; }
+.help-banner-contact-row strong { display: block; font-size: 12px; color: rgba(255,255,255,.65); font-weight: 600; }
+.help-banner-contact-row a, .help-banner-contact-row span.contact-value { display: block; font-size: 13.5px; color: #fff; text-decoration: none; }
+.help-banner-contact-row a:hover { text-decoration: underline; }
+.help-banner-commitment { display: flex; align-items: flex-start; gap: 12px; border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; }
+.help-banner-commitment i { font-size: 20px; color: #4ED199; flex-shrink: 0; margin-top: 2px; }
+.help-banner-commitment strong { display: block; font-size: 13px; color: #fff; margin-bottom: 3px; }
+.help-banner-commitment span { display: block; font-size: 12px; color: rgba(255,255,255,.65); line-height: 1.5; }
+@media (max-width: 991px) {
+  .help-banner { position: static; margin-top: 30px; }
+}
+
 /* Cards */
 .prod-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 16px rgba(32,41,189,.08); overflow: hidden; display: flex; flex-direction: column; height: 100%; transition: transform .25s, box-shadow .25s; }
 .prod-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(32,41,189,.16); }
@@ -104,289 +137,110 @@ require 'partials/head.php';
 			</div>
 			<div class="section" style="padding-top:50px;padding-bottom:60px;background:#f8f9fc;">
 				<div class="container">
-					<!-- Encabezado de sección -->
-					<div class="cat-header">
-						<div class="row" style="align-items:flex-end;">
-							<div class="col-md-6">
-								<h6 style="color:#4ED199;letter-spacing:3px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;margin-bottom:8px;">CATÁLOGO COMPLETO</h6>
-								<h2 class="cat-header" style="padding:0;margin:0 0 6px;">Categorías de productos</h2>
-								<p>Soluciones para automatización y control industrial</p>
-							</div>
-							<div class="col-md-6">
-								<div class="cat-filters">
-									<button class="cat-filter-btn active" data-filter="all">Todas las categorías</button>
-									<button class="cat-filter-btn" data-filter="neumatico">Neumático</button>
-									<button class="cat-filter-btn" data-filter="electrico">Eléctrico</button>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<?php
-					$productos = [
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_2.png',
-							'title'      => 'Cilindros',
-							'fichas_dir' => 'CILINDROS',
-							'img'        => 'assets/images/equipos/CILINDROS.png',
-							'items'      => ['Cilindros de doble efecto', 'Cilindros compactos', 'Cilindros con guía'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_1.png',
-							'title'      => 'Conectores',
-							'fichas_dir' => 'CONECTORES',
-							'img'        => 'assets/images/equipos/CONEXIONES.png',
-							'items'      => ['Conexiones rectas', 'Conexiones en codo', 'Acoplamientos neumáticos'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_3.png',
-							'title'      => 'Mangueras',
-							'fichas_dir' => 'MANGUERAS',
-							'img'        => 'assets/images/equipos/MANGUERAS.png',
-							'items'      => ['Manguera nylon', 'Manguera poliuretano', 'Manguera teflón'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_6.png',
-							'title'      => 'Tratamientos de aire',
-							'fichas_dir' => 'TRATAMIENTO DE AIRE',
-							'img'        => 'assets/images/equipos/TRATAMIENTOS_DE_AIRE.png',
-							'items'      => ['Unidades FRL', 'Reguladores de presión', 'Lubricadores'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_4.png',
-							'title'      => 'Válvulas neumáticas',
-							'fichas_dir' => 'VALVULAS',
-							'img'        => 'assets/images/equipos/VALVULAS_NEUMATICAS.png',
-							'items'      => ['Electroválvulas serie 4V', 'Válvulas de proceso', 'Válvulas de escape rápido'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_8.png',
-							'title'      => 'Válvulas de vacío',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/VACIO.png',
-							'items'      => ['De compuerta', 'De Bola', 'De Diafragma'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_SENSORES.png',
-							'title'      => 'Sensores',
-							'fichas_dir' => 'SENSORES',
-							'img'        => 'assets/images/equipos/SENSORES.png',
-							'items'      => ['Inductivos', 'Capacitivos', 'Fotoeléctricos'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_RELEVADORES.png',
-							'title'      => 'Relevadores de control',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/RELEVADORES_DE_CONTROL.png',
-							'items'      => ['De estado sólido', 'Electromecánicos', 'Mono & trifásicos'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_BOTONERIA.png',
-							'title'      => 'Botoneria 22 mm',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/BOTONERIA.png',
-							'items'      => ['Pulsador sostenido', 'Pulsador momentáneo', 'De arranque y paro'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_FUENTES.png',
-							'title'      => 'Fuentes de alimentación',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/FUENTES_DE_ALIMENTACION.png',
-							'items'      => ['Monofásicas', 'Trifásicas', 'Varias capacidades de salida'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_INTERRUPTORES.png',
-							'title'      => 'Interruptores de limite',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/INTERRUPTORES_DE_LIMITE.png',
-							'items'      => ['De leva', 'De rodillo fijo', 'Rodillo ajustable'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_ACCESSORIOS.png',
-							'title'      => 'Cables y accesorios',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CABLES_Y_ACCESORIOS.png',
-							'items'      => ['Cables para sensor', 'Conector codo M12', 'Conectores armables M8'],
-						],
-						[ 
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_PLC.png',
-							'title'      => 'PLC\'s',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/PLC.png',
-							'items'      => ['Controladores programables', 'Módulos de expansión', 'Comunicaciones industriales y control'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_CONTACTORES.png',
-							'title'      => 'Contactores',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CONTACTORES.png',
-							'items'      => ['Monofásicos y trifásicos', 'Bobinas AC/DC', 'Contactos auxiliares'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_POTENCIOMETRO.png',
-							'title'      => 'Potenciómetro',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/POTENCIOMETRO.png',
-							'items'      => ['Para tablero de control', 'Diferentes valores Óhmicos', 'Con perilla y accesorios'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_VENTILADORES.png',
-							'title'      => 'Ventiladores para tablero',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/VENTILADORES.png',
-							'items'      => ['Ventilacion de gabinete', 'Filtros y rejillas', 'Diferentes medidas'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_CAJA_ARRANCADOR.png',
-							'title'      => 'Caja para arrancador',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CAJA_PARA_ARRANCADOR.png',
-							'items'      => ['Para arranque y paro', 'Protección para control eléctrico', 'Uso en tableros y maquinaria'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_INTERRUPTORES_TERMO.png',
-							'title'      => 'Interruptores termomagnéticos de control',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/INTERRUPTORES_TERMOMAGNETICO.png',
-							'items'      => ['Protección contra sobrecarga', 'Protección contra cortocircuito', 'Para circuitos de control'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_TORRETA.png',
-							'title'      => 'Torretas industriales',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/TORRETAS.png',
-							'items'      => ['Señalización Visual', 'Módulos LED y buzzer', 'Para tableros y maquinaria'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_CONTROLADOR.png',
-							'title'      => 'Controladores de temperatura y contadores',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CONTROLADORES.png',
-							'items'      => ['Control preciso de temperatura', 'Contadores y temporizadores', 'Montaje en panel'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_RIEL.png',
-							'title'      => 'Riel DIN y Canaleta industrial',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/RIEL.png',
-							'items'      => ['Organización de cableado', 'Montaje de componentes', 'Diferentes medidas'],
-						],
-
-
-					];
-
-					// Recopilar fichas por producto
-					$fichas_base = __DIR__ . '/assets/fichas-tecnicas/';
-					foreach ($productos as &$p) {
-						$p['fichas'] = [];
-						if ($p['fichas_dir']) {
-							$dir = $fichas_base . $p['fichas_dir'];
-							if (is_dir($dir)) {
-								$files = array_values(array_filter(scandir($dir), fn($f) => pathinfo($f, PATHINFO_EXTENSION) === 'pdf'));
-								foreach ($files as $f) {
-									$p['fichas'][] = ['name' => $f, 'url' => 'assets/fichas-tecnicas/' . rawurlencode($p['fichas_dir']) . '/' . rawurlencode($f)];
-								}
-							}
-						}
-					}
-					unset($p);
-					?>
-
-					<div class="row" style="margin-top:10px;">
-						<?php foreach ($productos as $idx => $p): ?>
-							<div class="col-md-4 prod-card-col" data-cat="<?= htmlspecialchars($p['cat'], ENT_QUOTES) ?>" style="margin-bottom:28px;display:flex;">
-								<div class="prod-card" style="width:100%;">
-									<div class="prod-card-photo">
-										<img src="<?= htmlspecialchars($p['img'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>" loading="lazy">
-										<div class="prod-card-icon">
-											<img src="<?= htmlspecialchars($p['icon'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>">
-										</div>
+					<div class="row">
+						<div class="col-lg-8">
+							<!-- Encabezado de sección -->
+							<div class="cat-header">
+								<div class="row" style="align-items:flex-end;">
+									<div class="col-md-6">
+										<h6 style="color:#4ED199;letter-spacing:3px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;margin-bottom:8px;">CATÁLOGO COMPLETO</h6>
+										<h2 class="cat-header" style="padding:0;margin:0 0 6px;">Categorías de productos</h2>
+										<p>Soluciones para automatización y control industrial</p>
 									</div>
-									<div class="prod-card-body">
-										<h4><?= htmlspecialchars($p['title']) ?></h4>
-										<ul class="prod-card-features">
-											<?php foreach ($p['items'] as $item): ?>
-												<li><?= htmlspecialchars($item) ?></li>
-											<?php endforeach; ?>
-										</ul>
-										<div class="prod-card-actions">
-											<a href="contacto.php" class="btn-cotizar">COTIZAR</a>
-											<?php if (!empty($p['fichas'])): ?>
-												<button type="button" class="btn-ficha" onclick="abrirFichas(<?= $idx ?>)">
-													<i class="icon-doc-text-inv"></i> FICHA TÉCNICA
-												</button>
-											<?php endif; ?>
+									<div class="col-md-6">
+										<div class="cat-filters">
+											<button class="cat-filter-btn active" data-filter="all">Todas las categorías</button>
+											<button class="cat-filter-btn" data-filter="neumatico">Neumático</button>
+											<button class="cat-filter-btn" data-filter="electrico">Eléctrico</button>
 										</div>
 									</div>
 								</div>
 							</div>
-						<?php endforeach; ?>
-					</div>
 
-					<!-- Modal Fichas Técnicas -->
-					<div id="fichas-modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99999;align-items:center;justify-content:center;">
-						<div id="fichas-modal-box" style="background:#fff;border-radius:10px;width:90%;max-width:900px;max-height:80vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.25);">
-							<div style="background:#2029BD;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;border-radius:10px 10px 0 0;">
-								<h4 id="fichas-modal-title" style="color:#fff;margin:0;font-size:18px;font-family:'Poppins',sans-serif;"></h4>
-								<button onclick="cerrarFichas()" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1;">&times;</button>
+							<?php $productos = require __DIR__ . '/data/productos.php'; ?>
+
+							<div class="row" style="margin-top:10px;">
+								<?php foreach ($productos as $idx => $p): ?>
+									<div class="col-md-4 prod-card-col" data-cat="<?= htmlspecialchars($p['cat'], ENT_QUOTES) ?>" style="margin-bottom:28px;display:flex;">
+										<div class="prod-card" style="width:100%;">
+											<div class="prod-card-photo">
+												<img src="<?= htmlspecialchars($p['img'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>" loading="lazy">
+												<div class="prod-card-icon">
+													<img src="<?= htmlspecialchars($p['icon'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>">
+												</div>
+											</div>
+											<div class="prod-card-body">
+												<h4><?= htmlspecialchars($p['title']) ?></h4>
+												<ul class="prod-card-features">
+													<?php foreach ($p['items'] as $item): ?>
+														<li><?= htmlspecialchars($item) ?></li>
+													<?php endforeach; ?>
+												</ul>
+												<div class="prod-card-actions">
+													<a href="contacto.php" class="btn-cotizar">COTIZAR</a>
+													<a href="fichas.php?cat=<?= urlencode($p['slug']) ?>" class="btn-ficha">
+														<i class="icon-doc-text-inv"></i> FICHA TÉCNICA
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								<?php endforeach; ?>
 							</div>
-							<ul id="fichas-modal-list" style="list-style:none;padding:24px 28px;margin:0;"></ul>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="help-banner">
+								<div class="help-banner-icon"><i class="icon-chat"></i></div>
+								<h3>¿No encuentras lo que necesitas?</h3>
+								<p class="help-banner-lead">Envíanos una foto, número de parte o descripción de tu equipo y te ayudamos a encontrar la mejor solución.</p>
+
+								<div class="help-banner-actions">
+									<a href="https://wa.me/525620119180?text=Hola%2C%20necesito%20ayuda%20para%20encontrar%20un%20equipo" class="btn-whatsapp" target="_blank" rel="noopener">
+										<i class="fa-icon-whatsapp"></i> Enviar información por WhatsApp
+									</a>
+									<a href="contacto.php" class="btn-asesoria">
+										<i class="icon-user"></i> Solicitar asesoría
+									</a>
+								</div>
+
+								<ul class="help-banner-features">
+									<li>
+										<i class="icon-clock"></i>
+										<div><strong>Respuesta rápida</strong><span>Atención ágil y personalizada.</span></div>
+									</li>
+									<li>
+										<i class="icon-user"></i>
+										<div><strong>Asesoría especializada</strong><span>Expertos listos para ayudarte.</span></div>
+									</li>
+									<li>
+										<i class="icon-cog"></i>
+										<div><strong>Soluciones a la medida</strong><span>Diseñadas para tu industria.</span></div>
+									</li>
+								</ul>
+
+								<div class="help-banner-contact">
+									<div class="help-banner-contact-row">
+										<i class="icon-phone"></i>
+										<div><strong>Teléfono</strong><a href="tel:+525620119180">+52 56 2011 9180</a></div>
+									</div>
+									<div class="help-banner-contact-row">
+										<i class="icon-mail"></i>
+										<div><strong>Correo</strong><a href="mailto:cotizaciones@fluidtec.mx">cotizaciones@fluidtec.mx</a></div>
+									</div>
+									<div class="help-banner-contact-row">
+										<i class="icon-clock"></i>
+										<div><strong>Tiempo de respuesta</strong><span class="contact-value">Menos de 2 horas hábiles</span></div>
+									</div>
+								</div>
+
+								<div class="help-banner-commitment">
+									<i class="icon-lock"></i>
+									<div><strong>Compromiso Fluidtec</strong><span>Productos de calidad, respaldo técnico y disponibilidad garantizada.</span></div>
+								</div>
+							</div>
 						</div>
 					</div>
-
-					<?php
-					$fichas_js = [];
-					foreach ($productos as $idx => $p) {
-						$fichas_js[$idx] = ['title' => $p['title'], 'fichas' => $p['fichas']];
-					}
-					?>
-					<script>
-						var fichasData = <?= json_encode(array_values($fichas_js), JSON_UNESCAPED_UNICODE) ?>;
-
-						function abrirFichas(idx) {
-							var data = fichasData[idx];
-							document.getElementById('fichas-modal-title').textContent = 'Fichas Técnicas – ' + data.title;
-							var list = document.getElementById('fichas-modal-list');
-							list.innerHTML = '';
-							data.fichas.forEach(function(f) {
-								var li = document.createElement('li');
-								li.style = 'border-bottom:1px solid #f0f0f0;padding:12px 0;display:flex;align-items:center;gap:12px;';
-								li.innerHTML = '<i class="icon-doc-text-inv" style="color:#2029BD;font-size:22px;flex-shrink:0;"></i>' +
-									'<span style="flex:1;color:#333;font-size:14px;">' + f.name.replace(/\.pdf$/i, '') + '</span>' +
-									'<a href="' + f.url + '" download style="background:#2029BD;color:#fff;padding:7px 16px;border-radius:4px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:1px;white-space:nowrap;"><i class="icon-download"></i> DESCARGAR</a>';
-								list.appendChild(li);
-							});
-							document.getElementById('fichas-modal-overlay').style.display = 'flex';
-						}
-
-						function cerrarFichas() {
-							document.getElementById('fichas-modal-overlay').style.display = 'none';
-						}
-						document.getElementById('fichas-modal-overlay').addEventListener('click', function(e) {
-							if (e.target === this) cerrarFichas();
-						});
-					</script>
 				</div>
 			</div>
 			<div class="section" style="padding:80px 0;background-color:#2029BD;margin-top:50px">
