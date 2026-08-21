@@ -13,7 +13,7 @@ $page_extra_css   = <<<'CSS'
 .cat-filter-btn { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .5px; padding: 8px 18px; border-radius: 4px; border: 1.5px solid #dde1f0; background: #fff; color: #555; cursor: pointer; transition: all .2s; }
 .cat-filter-btn.active, .cat-filter-btn:hover { background: #2029BD; border-color: #2029BD; color: #fff; }
 
-#Content .section > .container { width: 90%; max-width: 1400px; margin: 0 auto; }
+#Content .section > .container { width: 90%; max-width: none; margin: 0 auto; }
 
 /* Banner de ayuda */
 .help-banner { position: sticky; top: 100px; background: linear-gradient(160deg, #001F5C 0%, #2029BD 100%); border-radius: 16px; padding: 30px 26px; color: #fff; }
@@ -164,7 +164,7 @@ require 'partials/head.php';
 									<div class="col-md-4 prod-card-col" data-cat="<?= htmlspecialchars($p['cat'], ENT_QUOTES) ?>" style="margin-bottom:28px;display:flex;">
 										<div class="prod-card" style="width:100%;">
 											<div class="prod-card-photo">
-												<img src="<?= htmlspecialchars($p['img'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>" loading="lazy">
+												<img src="<?= htmlspecialchars($p['img_category'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>" loading="lazy">
 												<div class="prod-card-icon">
 													<img src="<?= htmlspecialchars($p['icon'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>">
 												</div>

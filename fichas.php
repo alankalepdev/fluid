@@ -153,7 +153,7 @@ require 'partials/head.php';
 						</div>
 						<div class="col-md-6">
 							<div class="fx-hero-photo<?= !empty($producto['img_no_card']) ? ' fx-hero-photo--no-card' : '' ?>">
-								<img src="<?= htmlspecialchars($producto['img'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($fichaTitle, ENT_QUOTES) ?>">
+								<img src="<?= htmlspecialchars($producto['img_ficha'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($fichaTitle, ENT_QUOTES) ?>">
 							</div>
 						</div>
 					</div>
@@ -167,7 +167,7 @@ require 'partials/head.php';
 							<div class="fx-sidebar">
 								<h6>Familias de <?= htmlspecialchars(mb_strtolower($fichaTitle)) ?></h6>
 								<button type="button" class="fx-filter-btn active" data-group="all">
-									<i class="icon-layout"></i> Todas las familias
+									<i class="icon-layout"></i> TODAS LAS FAMILIAS
 								</button>
 								<?php foreach ($grupos as $grupo): ?>
 									<button type="button" class="fx-filter-btn" data-group="<?= htmlspecialchars($grupo, ENT_QUOTES) ?>">
@@ -210,6 +210,7 @@ require 'partials/head.php';
 							</div>
 
 							<div class="fx-cta-bar">
+								<a class="btn btn-primary" href="javascript:history.back()"><i class="fa-icon-arrow-left"></i> Regresar</a>
 								<div class="fx-cta-bar-left">
 									<i class="icon-help-circled"></i>
 									<div><strong>¿No encuentras el archivo que buscas?</strong><span>Contáctanos y con gusto te ayudaremos.</span></div>
