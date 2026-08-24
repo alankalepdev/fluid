@@ -5,3 +5,4 @@
 # node_modules (si en algún momento instalas dependencias)
 node_modules/
 assets/fichas-tecnicas/
+**/.DS_Store
