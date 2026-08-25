@@ -45,18 +45,33 @@ $page_extra_css   = <<<'CSS'
 #Content .fx-hero .container,
 #Content .fx-body .container { width: 90%; max-width: 90%; margin: 0 auto; }
 
-.fx-hero { background: linear-gradient(135deg, #001F5C 0%, #2029BD 100%); padding: 70px 0 54px; overflow: hidden; }
-.fx-hero-icon { width: 74px; height: 74px; border-radius: 16px; background: rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center; margin-bottom: 26px; }
-.fx-hero-icon i { font-size: 32px; color: #fff; }
-.fx-hero h1 { font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 700; color: #fff; line-height: 1.25; margin: 0 0 18px; }
-.fx-hero h1 span { color: #9db4ff; display: block; }
-.fx-hero p.fx-lead { color: rgba(255,255,255,.8); font-size: 17px; max-width: 480px; margin: 0 0 32px; }
-.fx-badges { display: flex; flex-wrap: wrap; gap: 32px; }
+.fx-hero {
+  position: relative;
+  background:
+    linear-gradient(90deg, #2029BD 0%, #4ED199 100%) top / 100% 4px no-repeat,
+    linear-gradient(90deg, #2029BD 0%, #4ED199 100%) bottom / 100% 4px no-repeat,
+    #fff;
+  padding: 62px 0 46px; overflow: hidden;
+}
+.fx-hero::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none;
+  background: url('assets/images/bg-fichas-hero.png') right top / cover no-repeat;
+}
+.fx-hero-icon { position: relative; z-index: 1; width: 74px; height: 74px; border-radius: 16px; background: #eef1fd; border: 2px solid #2029BD; display: flex; align-items: center; justify-content: center; margin-bottom: 26px; }
+.fx-hero-icon i { font-size: 32px; color: #2029BD; }
+.fx-hero h1 { position: relative; z-index: 1; font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 700; color: #1a1f3c; line-height: 1.25; margin: 0 0 18px; }
+.fx-hero h1 span { color: #2029BD; display: block; }
+.fx-hero p.fx-lead { position: relative; z-index: 1; color: #5a6180; font-size: 17px; max-width: 480px; margin: 0 0 32px; }
+.fx-badges { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 32px; }
 .fx-badge { display: flex; align-items: center; gap: 14px; }
-.fx-badge i { font-size: 24px; color: #4ED199; flex-shrink: 0; }
-.fx-badge strong { display: block; color: #fff; font-size: 14px; font-weight: 700; }
-.fx-badge span { display: block; color: rgba(255,255,255,.7); font-size: 13px; }
-.fx-hero-photo { background: #fff; border-radius: 16px; padding: 26px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+.fx-badge-icon { width: 42px; height: 42px; border-radius: 50%; border: 2px solid currentColor; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.fx-badge i { font-size: 18px; }
+.fx-badge:nth-child(1) .fx-badge-icon { color: #2029BD; }
+.fx-badge:nth-child(2) .fx-badge-icon { color: #4ED199; }
+.fx-badge:nth-child(3) .fx-badge-icon { color: #2029BD; }
+.fx-badge strong { display: block; color: #1a1f3c; font-size: 14px; font-weight: 700; }
+.fx-badge span { display: block; color: #838aa8; font-size: 13px; }
+.fx-hero-photo { position: relative; z-index: 1; background: #f4f6fb; border-radius: 16px; padding: 26px; box-shadow: 0 20px 50px rgba(32,41,189,.08); }
 .fx-hero-photo img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .fx-hero-photo--no-card { background: none; padding: 0; box-shadow: none; }
 .fx-hero-photo--no-card img { border-radius: 0; }
@@ -91,6 +106,7 @@ $page_extra_css   = <<<'CSS'
 .fx-cta-bar-left span { font-size: 13.5px; color: #777; }
 
 @media (max-width: 767px) {
+  .fx-hero::after { display: none; }
   .fx-hero-photo { margin-top: 24px; }
   .fam-card { flex-direction: column; align-items: flex-start; }
   .fam-card-photo { width: 100%; height: 200px; }
@@ -138,15 +154,15 @@ require 'partials/head.php';
 							<p class="fx-lead">Descarga las fichas técnicas de nuestra línea de <?= htmlspecialchars(mb_strtolower($fichaTitle)) ?> de alta calidad.</p>
 							<div class="fx-badges">
 								<div class="fx-badge">
-									<i class="icon-lock"></i>
+									<div class="fx-badge-icon"><i class="icon-lock"></i></div>
 									<div><strong>Alta calidad</strong><span>Estándares internacionales</span></div>
 								</div>
 								<div class="fx-badge">
-									<i class="icon-network"></i>
+									<div class="fx-badge-icon"><i class="icon-network"></i></div>
 									<div><strong>Variedad</strong><span>Amplio portafolio</span></div>
 								</div>
 								<div class="fx-badge">
-									<i class="icon-download"></i>
+									<div class="fx-badge-icon"><i class="icon-download"></i></div>
 									<div><strong>Descarga inmediata</strong><span>Fichas técnicas actualizadas</span></div>
 								</div>
 							</div>
