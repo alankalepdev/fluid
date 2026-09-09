@@ -34,7 +34,7 @@ unset($fam);
 
 $grupos     = array_values(array_unique(array_column($familias, 'group')));
 $fichaTitle = $producto['ficha_title'] ?? $producto['title'];
-
+$iconEquipo = "$producto[icon]";
 $page_title       = 'Fichas Técnicas – ' . $fichaTitle . ' | Fluidtec México';
 $page_description = 'Descarga las fichas técnicas de nuestra línea de ' . mb_strtolower($fichaTitle) . '.';
 $page_body_class  = 'page style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
@@ -57,8 +57,9 @@ $page_extra_css   = <<<'CSS'
   content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none;
   background: url('assets/images/bg-fichas-hero.png') right top / cover no-repeat;
 }
-.fx-hero-icon { position: relative; z-index: 1; width: 74px; height: 74px; border-radius: 16px; background: #eef1fd; border: 2px solid #2029BD; display: flex; align-items: center; justify-content: center; margin-bottom: 26px; }
+.fx-hero-icon { position: relative; z-index: 1; width: 74px; height: 74px; border-radius: 16px; background: #eef1fd; border: 2px solid #2029BD; display: flex; align-items: center; justify-content: center; margin-bottom: 26px; overflow: hidden; }
 .fx-hero-icon i { font-size: 32px; color: #2029BD; }
+.fx-hero-icon img { width: 90%; height: 90%; object-fit: contain; border-radius: inherit; }
 .fx-hero h1 { position: relative; z-index: 1; font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 700; color: #1a1f3c; line-height: 1.25; margin: 0 0 18px; }
 .fx-hero h1 span { color: #2029BD; display: block; }
 .fx-hero p.fx-lead { position: relative; z-index: 1; color: #5a6180; font-size: 17px; max-width: 480px; margin: 0 0 32px; }
@@ -148,8 +149,8 @@ require 'partials/head.php';
 			<div class="fx-hero">
 				<div class="container">
 					<div class="row" style="align-items:center;">
-						<div class="col-md-6">
-							<div class="fx-hero-icon"><i class="icon-doc-text-inv"></i></div>
+						<div class="col-md-5">
+							<div class="fx-hero-icon" style="background-color: #fff;"><img src="<?= htmlspecialchars($iconEquipo, ENT_QUOTES) ?>" alt="<?= htmlspecialchars($fichaTitle, ENT_QUOTES) ?>"></div>
 							<h1>Fichas Técnicas – <span><?= htmlspecialchars($fichaTitle) ?></span></h1>
 							<p class="fx-lead">Descarga las fichas técnicas de nuestra línea de <?= htmlspecialchars(mb_strtolower($fichaTitle)) ?> de alta calidad.</p>
 							<div class="fx-badges">
@@ -167,7 +168,7 @@ require 'partials/head.php';
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-7">
 							<div class="fx-hero-photo<?= !empty($producto['img_no_card']) ? ' fx-hero-photo--no-card' : '' ?>">
 								<img src="<?= htmlspecialchars($producto['img_ficha'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($fichaTitle, ENT_QUOTES) ?>">
 							</div>

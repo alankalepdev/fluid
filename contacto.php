@@ -3,8 +3,47 @@ $page_title       = 'Contacto | Fluidtec México';
 $page_description = 'Contacta a Fluidtec México para cotizaciones de componentes industriales. Tel: (56) 2011 9180. Cuautitlán Izcalli, Estado de México.';
 $page_body_class  = 'page style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
 $page_id          = 'contacto';
-$page_extra_css   = '';
-$page_extra_js    = '';
+$page_extra_css   = <<<'CSS'
+<link rel="stylesheet" href="assets/plugins/waitme/waitMe.css">
+CSS;
+$page_extra_js    = <<<'JS'
+<script src="assets/plugins/waitme/waitMe.js"></script>
+<script>
+(function () {
+	var form = document.getElementById('reused_form');
+	if (!form) return;
+
+	form.addEventListener('submit', function (e) {
+		e.preventDefault();
+
+		var wrapper = document.getElementById('contactWrapper');
+		var success = document.getElementById('success_message');
+		var error   = document.getElementById('error_message');
+		success.style.display = 'none';
+		error.style.display   = 'none';
+
+		jQuery(wrapper).waitMe({ effect: 'bounce', text: 'Enviando...', bg: 'rgba(255,255,255,0.85)', color: '#2029BD' });
+
+		fetch('send_mail.php', { method: 'POST', body: new FormData(form) })
+			.then(function (res) { return res.json(); })
+			.then(function (data) {
+				jQuery(wrapper).waitMe('hide');
+				if (data.success) {
+					form.style.display = 'none';
+					success.style.display = 'block';
+				} else {
+					if (data.message) error.querySelector('#error_detail').textContent = data.message;
+					error.style.display = 'block';
+				}
+			})
+			.catch(function () {
+				jQuery(wrapper).waitMe('hide');
+				error.style.display = 'block';
+			});
+	});
+})();
+</script>
+JS;
 $page_header_extra = '';
 
 require 'partials/head.php';
@@ -71,6 +110,7 @@ require 'partials/head.php';
 							<div id="contactWrapper">
 								<div id="contactform">
 									<form method="post" action="send_mail.php" id="reused_form">
+										<input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;" aria-hidden="true">
 										<div class="column one-second">
 											<input placeholder="Tu nombre" id="name" type="text" name="Name" required maxlength="50">
 										</div>
@@ -92,7 +132,7 @@ require 'partials/head.php';
 										<p>Nos pondremos en contacto contigo pronto.</p>
 									</div>
 									<div id="error_message" style="width:100%;height:100%;display:none;">
-										<h3>Error</h3> Hubo un problema al enviar el formulario. Intenta de nuevo.
+										<h3>Error</h3> <span id="error_detail">Hubo un problema al enviar el formulario. Intenta de nuevo.</span>
 									</div>
 								</div>
 							</div>

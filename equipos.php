@@ -177,7 +177,7 @@ require 'partials/head.php';
 													<?php endforeach; ?>
 												</ul>
 												<div class="prod-card-actions">
-													<a href="contacto.php" class="btn-cotizar">COTIZAR</a>
+													<!-- <a href="contacto.php" class="btn-cotizar">COTIZAR</a> -->
 													<a href="fichas.php?cat=<?= urlencode($p['slug']) ?>" class="btn-ficha">
 														<i class="icon-doc-text-inv"></i> FICHA TÉCNICA
 													</a>

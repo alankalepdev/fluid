@@ -6,3 +6,7 @@
 node_modules/
 assets/fichas-tecnicas/
 **/.DS_Store
+
+# Dependencias PHP (Composer) y credenciales de correo
+vendor/
+config/mail.php
