@@ -24,9 +24,9 @@ $familias = $producto['familias'] ?? array_map(
 foreach ($familias as &$fam) {
 	$fam['pdf_url'] = null;
 	if (!empty($producto['fichas_dir']) && !empty($fam['file'])) {
-		$abs = __DIR__ . '/assets/fichas-tecnicas/' . $producto['fichas_dir'] . '/' . $fam['file'];
+		$abs = __DIR__ . '/assets/images/equipos/fichas/' . $producto['fichas_dir'] . '/PDF/' . $fam['file'];
 		if (is_file($abs)) {
-			$fam['pdf_url'] = 'assets/fichas-tecnicas/' . rawurlencode($producto['fichas_dir']) . '/' . rawurlencode($fam['file']);
+			$fam['pdf_url'] = 'assets/images/equipos/fichas/' . rawurlencode($producto['fichas_dir']) . '/PDF/' . rawurlencode($fam['file']);
 		}
 	}
 }

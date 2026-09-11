@@ -10,3 +10,5 @@ assets/fichas-tecnicas/
 # Dependencias PHP (Composer) y credenciales de correo
 vendor/
 config/mail.php
+*.pdf
+*.zip
