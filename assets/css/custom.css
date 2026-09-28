@@ -1,5 +1,5 @@
 /* ===== Fluidtec Hero Slider ===== */
-.fluidtec-hero-slider { position: relative; width: 100%; height: 720px; overflow: hidden; }
+.fluidtec-hero-slider { position: relative; width: 100%; height: 850px; overflow: hidden; }
 .fluidtec-hero-slider .swiper { width: 100%; height: 100%; }
 .fluidtec-hero-slider .swiper-slide { position: relative; background-size: cover; background-position: center; display: flex; align-items: center; }
 .fluidtec-hero-slider .slide-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(10,14,60,0.82) 0%, rgba(10,14,60,0.45) 60%, rgba(0,0,0,0.15) 75%); }
@@ -31,7 +31,7 @@
 .btn-outline-ft:hover { background: #4ED199; color: #fff; transform: translateY(-2px); }
 
 @media (max-width: 768px) {
-	.fluidtec-hero-slider { height: 560px; }
+	.fluidtec-hero-slider { height: 640px; }
 	.fluidtec-hero-slider .slide-content { padding: 0 24px; max-width: 100%; }
 	.fluidtec-hero-slider .slide-title { font-size: 30px; }
 }

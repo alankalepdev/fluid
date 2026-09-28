@@ -5,6 +5,33 @@ array `familias` (imágenes, descripciones y grupos de filtro) para que
 `fichas.php?cat={slug}` las renderice correctamente. `equipos.php` lee el
 mismo archivo, así que cualquier cambio aquí se refleja en ambas páginas.
 
+## Registro de cambios
+
+### 2026-09-28
+
+- **Slider principal del inicio más alto**: `.fluidtec-hero-slider` pasa de
+  720px a 850px en escritorio y de 560px a 640px en móvil (≤768px). Cambio
+  aplicado en `assets/css/custom.css` (usado por `index.php`) y en
+  `src/pages/index.html` (versión estática).
+- **Botonería**: `img_ficha` apunta ahora a
+  `assets/images/equipos/fichas/BOTONERIA/BOTONERIA-FICHA.png` (nueva) y se
+  agregó `img_no_card => true`.
+- **PLC's**: `img_ficha` corregido a
+  `assets/images/equipos/fichas/PLC/PLC-FICHA.png` (nueva; la ruta anterior
+  `assets/images/equipos/PLC-FICHA.png` no existía) y se agregó
+  `img_no_card => true`.
+- **Correo de contacto** (`send_mail.php`): el cuerpo HTML del mensaje se
+  rediseñó con plantilla de marca (encabezado con degradado azul/verde, tabla
+  de Nombre/Correo/Empresa, bloque de mensaje y pie). El `AltBody` en texto
+  plano no cambia.
+- **Imágenes actualizadas/optimizadas**: banners del slider
+  (`FLUDITEC-BANNER-3-WEB-3.png`, `fluidtec-banner-slider-1..5.png`) y
+  collages `*SIN FONDO.png` de Contactores, Controladores, Fuentes,
+  Interruptores, Potenciómetro, Riel DIN y Torretas.
+- **Válvulas**: nueva carpeta `assets/images/equipos/fichas/VALVULAS/PDF/`
+  con los PDFs de fichas y banners de productos 2026. Los `.pdf` están en
+  `.gitignore`, así que deben subirse al servidor por separado.
+
 ## Categorías completadas
 
 | Slug | Título | Familias | Notas |

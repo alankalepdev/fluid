@@ -184,7 +184,8 @@ return [
 		'title'      => 'Botoneria 22 mm',
 		'ficha_title' => 'Botonería',
 		'fichas_dir' => 'BOTONERIA',
-		'img_ficha'  => 'assets/images/equipos/fichas/BOTONERIA/PRODUCTOS_BOTONERA.png',
+		'img_ficha'  => 'assets/images/equipos/fichas/BOTONERIA/BOTONERIA-FICHA.png',
+		'img_no_card' => true,
 		'img_category'   => 'assets/images/equipos/BOTONERIA.png',
 		'items'      => ['Botones', 'Cajas', 'Botones iluminados', 'Lámparas indicadoras'],
 		'familias'   => [
@@ -242,7 +243,8 @@ return [
 		'title'      => 'PLC\'s',
 		'fichas_dir' => 'PLC',
 		'img_category'   => 'assets/images/equipos/PLC.png',
-		'img_ficha'  => 'assets/images/equipos/PLC-FICHA.png',
+		'img_ficha'  => 'assets/images/equipos/fichas/PLC/PLC-FICHA.png',
+		'img_no_card' => true,
 		'items'      => ['Controladores programables', 'Módulos de expansión', 'Comunicaciones industriales y control'],
 	],
 	[
