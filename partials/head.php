@@ -35,6 +35,6 @@
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="assets/plugins/rs-plugin/fonts/font-awesome/css/font-awesome.css">
 	<!-- Custom global styles -->
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/custom.css?v=<?= @filemtime(__DIR__ . '/../assets/css/custom.css') ?: time() ?>">
 	<?= $page_extra_css ?? '' ?>
 </head>

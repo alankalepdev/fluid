@@ -133,201 +133,14 @@ require 'partials/head.php';
 						</div>
 					</div>
 
-					<?php
-					$productos = [
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_2.png',
-							'title'      => 'Cilindros',
-							'fichas_dir' => 'CILINDROS',
-							'img'        => 'assets/images/equipos/CILINDROS.png',
-							'items'      => ['Cilindros de doble efecto', 'Cilindros compactos', 'Cilindros con guía'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_1.png',
-							'title'      => 'Conectores',
-							'fichas_dir' => 'CONECTORES',
-							'img'        => 'assets/images/equipos/CONEXIONES.png',
-							'items'      => ['Conexiones rectas', 'Conexiones en codo', 'Acoplamientos neumáticos'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_3.png',
-							'title'      => 'Mangueras',
-							'fichas_dir' => 'MANGUERAS',
-							'img'        => 'assets/images/equipos/MANGUERAS.png',
-							'items'      => ['Manguera nylon', 'Manguera poliuretano', 'Manguera teflón'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_6.png',
-							'title'      => 'Tratamientos de aire',
-							'fichas_dir' => 'TRATAMIENTO DE AIRE',
-							'img'        => 'assets/images/equipos/TRATAMIENTOS_DE_AIRE.png',
-							'items'      => ['Unidades FRL', 'Reguladores de presión', 'Lubricadores'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_4.png',
-							'title'      => 'Válvulas neumáticas',
-							'fichas_dir' => 'VALVULAS',
-							'img'        => 'assets/images/equipos/VALVULAS_NEUMATICAS.png',
-							'items'      => ['Electroválvulas serie 4V', 'Válvulas de proceso', 'Válvulas de escape rápido'],
-						],
-						[
-							'cat'        => 'neumatico',
-							'icon'       => 'assets/images/equipos/IC_8.png',
-							'title'      => 'Válvulas de vacío',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/VACIO.png',
-							'items'      => ['De compuerta', 'De Bola', 'De Diafragma']
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_SENSORES.png',
-							'title'      => 'Sensores',
-							'fichas_dir' => 'SENSORES',
-							'img'        => 'assets/images/equipos/SENSORES.png',
-							'items'      => ['Inductivos', 'Capacitivos', 'Fotoeléctricos'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_RELEVADORES.png',
-							'title'      => 'Relevadores de control',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/RELEVADORES_DE_CONTROL.png',
-							'items'      => ['De estado sólido', 'Electromecánicos', 'Mono & trifásicos'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_BOTONERIA.png',
-							'title'      => 'Botoneria 22 mm',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/BOTONERIA.png',
-							'items'      => ['Pulsador sostenido', 'Pulsador momentáneo', 'De arranque y paro'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_FUENTES.png',
-							'title'      => 'Fuentes de alimentación',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/FUENTES_DE_ALIMENTACION.png',
-							'items'      => ['Monofásicas', 'Trifásicas', 'Varias capacidades de salida'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_INTERRUPTORES.png',
-							'title'      => 'Interruptores de limite',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/INTERRUPTORES_DE_LIMITE.png',
-							'items'      => ['De leva', 'De rodillo fijo', 'Rodillo ajustable'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_ACCESSORIOS.png',
-							'title'      => 'Cables y accesorios',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CABLES_Y_ACCESORIOS.png',
-							'items'      => ['Cables para sensor', 'Conector codo M12', 'Conectores armables M8'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_PLC.png',
-							'title'      => 'PLC\'s',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/PLC.png',
-							'items'      => ['Controladores programables', 'Módulos de expansión', 'Comunicaciones industriales y control'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_CONTACTORES.png',
-							'title'      => 'Contactores',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CONTACTORES.png',
-							'items'      => ['Monofásicos y trifásicos', 'Bobinas AC/DC', 'Contactos auxiliares'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_POTENCIOMETRO.png',
-							'title'      => 'Potenciómetro',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/POTENCIOMETRO.png',
-							'items'      => ['Para tablero de control', 'Diferentes valores Óhmicos', 'Con perilla y accesorios'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_VENTILADORES.png',
-							'title'      => 'Ventiladores para tablero',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/VENTILADORES.png',
-							'items'      => ['Ventilacion de gabinete', 'Filtros y rejillas', 'Diferentes medidas'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_CAJA_ARRANCADOR.png',
-							'title'      => 'Caja para arrancador',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CAJA_PARA_ARRANCADOR.png',
-							'items'      => ['Para arranque y paro', 'Protección para control eléctrico', 'Uso en tableros y maquinaria'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_INTERRUPTORES_TERMO.png',
-							'title'      => 'Interruptores termomagnéticos de control',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/INTERRUPTORES_TERMOMAGNETICO.png',
-							'items'      => ['Protección contra sobrecarga', 'Protección contra cortocircuito', 'Para circuitos de control'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_TORRETA.png',
-							'title'      => 'Torretas industriales',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/TORRETAS.png',
-							'items'      => ['Señalización Visual', 'Módulos LED y buzzer', 'Para tableros y maquinaria'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_CONTROLADOR.png',
-							'title'      => 'Controladores de temperatura y contadores',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/CONTROLADORES.png',
-							'items'      => ['Control preciso de temperatura', 'Contadores y temporizadores', 'Montaje en panel'],
-						],
-						[
-							'cat'        => 'electrico',
-							'icon'       => 'assets/images/equipos/IC_RIEL.png',
-							'title'      => 'Riel DIN y Canaleta industrial',
-							'fichas_dir' => null,
-							'img'        => 'assets/images/equipos/RIEL.png',
-							'items'      => ['Organización de cableado', 'Montaje de componentes', 'Diferentes medidas'],
-						],
-					];
-
-					// Recopilar fichas por producto
-					$fichas_base = __DIR__ . '/assets/fichas-tecnicas/';
-					foreach ($productos as &$p) {
-						$p['fichas'] = [];
-						if ($p['fichas_dir']) {
-							$dir = $fichas_base . $p['fichas_dir'];
-							if (is_dir($dir)) {
-								$files = array_values(array_filter(scandir($dir), fn($f) => pathinfo($f, PATHINFO_EXTENSION) === 'pdf'));
-								foreach ($files as $f) {
-									$p['fichas'][] = ['name' => $f, 'url' => 'assets/fichas-tecnicas/' . rawurlencode($p['fichas_dir']) . '/' . rawurlencode($f)];
-								}
-							}
-						}
-					}
-					unset($p);
-					?>
+					<?php $productos = require __DIR__ . '/data/productos.php'; ?>
 
 					<div class="row" style="margin-top:10px;">
-						<?php foreach ($productos as $idx => $p): ?>
+						<?php foreach ($productos as $p): ?>
 							<div class="col-md-4 prod-card-col" data-cat="<?= htmlspecialchars($p['cat'], ENT_QUOTES) ?>" style="margin-bottom:28px;display:flex;">
 								<div class="prod-card" style="width:100%;">
 									<div class="prod-card-photo">
-										<img src="<?= htmlspecialchars($p['img'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>" loading="lazy">
+										<img src="<?= htmlspecialchars($p['img_category'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>" loading="lazy">
 										<div class="prod-card-icon">
 											<img src="<?= htmlspecialchars($p['icon'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($p['title'], ENT_QUOTES) ?>">
 										</div>
@@ -340,62 +153,15 @@ require 'partials/head.php';
 											<?php endforeach; ?>
 										</ul>
 										<div class="prod-card-actions">
-											<a href="contacto.php" class="btn-cotizar">COTIZAR</a>
-											<?php if (!empty($p['fichas'])): ?>
-												<button type="button" class="btn-ficha" onclick="abrirFichas(<?= $idx ?>)">
-													<i class="icon-doc-text-inv"></i> FICHA TÉCNICA
-												</button>
-											<?php endif; ?>
+											<a href="fichas.php?cat=<?= urlencode($p['slug']) ?>" class="btn-ficha">
+												<i class="icon-doc-text-inv"></i> FICHA TÉCNICA
+											</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						<?php endforeach; ?>
 					</div>
-
-					<!-- Modal Fichas Técnicas -->
-					<div id="fichas-modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99999;align-items:center;justify-content:center;">
-						<div id="fichas-modal-box" style="background:#fff;border-radius:10px;width:90%;max-width:900px;max-height:80vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.25);">
-							<div style="background:#2029BD;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;border-radius:10px 10px 0 0;">
-								<h4 id="fichas-modal-title" style="color:#fff;margin:0;font-size:18px;font-family:'Poppins',sans-serif;"></h4>
-								<button onclick="cerrarFichas()" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1;">&times;</button>
-							</div>
-							<ul id="fichas-modal-list" style="list-style:none;padding:24px 28px;margin:0;"></ul>
-						</div>
-					</div>
-
-					<?php
-					$fichas_js = [];
-					foreach ($productos as $idx => $p) {
-						$fichas_js[$idx] = ['title' => $p['title'], 'fichas' => $p['fichas']];
-					}
-					?>
-					<script>
-						var fichasData = <?= json_encode(array_values($fichas_js), JSON_UNESCAPED_UNICODE) ?>;
-
-						function abrirFichas(idx) {
-							var data = fichasData[idx];
-							document.getElementById('fichas-modal-title').textContent = 'Fichas Técnicas – ' + data.title;
-							var list = document.getElementById('fichas-modal-list');
-							list.innerHTML = '';
-							data.fichas.forEach(function(f) {
-								var li = document.createElement('li');
-								li.style = 'border-bottom:1px solid #f0f0f0;padding:12px 0;display:flex;align-items:center;gap:12px;';
-								li.innerHTML = '<i class="icon-doc-text-inv" style="color:#2029BD;font-size:22px;flex-shrink:0;"></i>' +
-									'<span style="flex:1;color:#333;font-size:14px;">' + f.name.replace(/\.pdf$/i, '') + '</span>' +
-									'<a href="' + f.url + '" download style="background:#2029BD;color:#fff;padding:7px 16px;border-radius:4px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:1px;white-space:nowrap;"><i class="icon-download"></i> DESCARGAR</a>';
-								list.appendChild(li);
-							});
-							document.getElementById('fichas-modal-overlay').style.display = 'flex';
-						}
-
-						function cerrarFichas() {
-							document.getElementById('fichas-modal-overlay').style.display = 'none';
-						}
-						document.getElementById('fichas-modal-overlay').addEventListener('click', function(e) {
-							if (e.target === this) cerrarFichas();
-						});
-					</script>
 				</div>
 			</div>
 

@@ -3,71 +3,121 @@
 	<div class="swiper" id="fluidtecSwiper">
 		<div class="swiper-wrapper">
 
-			<!-- Slide 1 – Componentes Industriales -->
-			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-1.png');">
+			<!-- Slide 1 – Regulador de Alta Presión -->
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-INICIO-WEB-1.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
-					<span class="slide-tag">Proyectos Industriales</span>
-					<h1 class="slide-title">Soluciones a medida<br><span>para líneas de producción</span></h1>
-					<p class="slide-desc">Desarrollamos propuestas integrales en neumática y automatización para mejorar la productividad y continuidad de tus procesos.</p>
+					<span class="slide-tag">Reguladores de Presión</span>
+					<h1 class="slide-title">Control preciso<br>de <span>alta presión</span></h1>
+					<p class="slide-desc">Ideal para sopladores de plástico, con manómetro integrado para monitoreo en tiempo real.</p>
+					<div class="slide-badges">
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-gauge"></i></div>
+							<div><strong>Rango de salida</strong><span>0.5 a 35 bar ajustable</span></div>
+						</div>
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-cog"></i></div>
+							<div><strong>Material y conexión</strong><span>Aluminio con rosca NPT</span></div>
+						</div>
+					</div>
 					<div class="slide-btns">
 						<a href="https://wa.me/525620119180" class="btn-primary-ft">Cotizar Ahora</a>
-						<a href="about.php" class="btn-outline-ft">CONOCER MÁS</a>
+						<a href="equipos.php" class="btn-outline-ft">Ver Productos</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- Slide 2 – Equipo Neumático -->
-			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-2.png');">
+			<!-- Slide 2 – Válvulas de Procesos -->
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-INICIO-WEB-2.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
-					<span class="slide-tag">EMPRESAS DE CONFIANZA</span>
-					<h1 class="slide-title">Trabajamos con la<span> industria</span> que<br> mueve a<span> México</span></h1>
-					<p class="slide-desc">Soluciones confiables en acero inoxidable para sistemas de automatización industrial.</p>
+					<span class="slide-tag">Válvulas de Procesos</span>
+					<h1 class="slide-title">Válvulas para<br>procesos <span>exigentes</span></h1>
+					<p class="slide-desc">Para industria alimenticia, química, vapor y agua, con alta resistencia a presión y temperatura.</p>
+					<div class="slide-badges">
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-flash"></i></div>
+							<div><strong>Actuación</strong><span>Neumática de doble efecto</span></div>
+						</div>
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-tools"></i></div>
+							<div><strong>Material</strong><span>Acero inoxidable, sellos de teflón</span></div>
+						</div>
+					</div>
 					<div class="slide-btns">
-						<a href="equipos.php" class="btn-primary-ft">Ver Proyectos</a>
+						<a href="equipos.php" class="btn-primary-ft">Ver Catálogo</a>
 						<a href="contacto.php" class="btn-outline-ft">Contactar</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- Slide 3 – Precios Competitivos -->
-			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-3.png');">
+			<!-- Slide 3 – Cilindros Neumáticos -->
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-INICIO-WEB-3.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
-					<span class="slide-tag">ASESORÍA PERSONALIZADA</span>
-					<h1 class="slide-title"><span>Soporte técnico</span><br> para cada <br><span>proyecto</span></h1>
-					<p class="slide-desc">La mejor opción para el control de temperatura en procesos industriales.</p>
+					<span class="slide-tag">Cilindros Neumáticos</span>
+					<h1 class="slide-title">Cilindros de<br><span>precisión comprobada</span></h1>
+					<p class="slide-desc">Series ADN, DNC, DSN, SI, SC/SU y ADVU bajo normas ISO, con fácil integración en sistemas existentes.</p>
+					<div class="slide-badges">
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-target"></i></div>
+							<div><strong>Precisión comprobada</strong><span>Desempeño confiable y certificado</span></div>
+						</div>
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-loop"></i></div>
+							<div><strong>Larga vida útil</strong><span>Incluso en ciclos intensivos</span></div>
+						</div>
+					</div>
 					<div class="slide-btns">
-						<a href="https://wa.me/525620119180" class="btn-primary-ft">Solicitar asesoría</a>
-						<a href="proyectos.php" class="btn-outline-ft">Quiénes somos</a>
+						<a href="https://wa.me/525620119180" class="btn-primary-ft">Cotizar Ahora</a>
+						<a href="about.php" class="btn-outline-ft">Quiénes Somos</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- Slide 4 – Empresas de Confianza -->
-			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-4.png');">
+			<!-- Slide 4 – Sistema de Vacío -->
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-INICIO-WEB-4.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
-					<span class="slide-tag">COMPONENTES neumáticOS</span>
-					<h1 class="slide-title">Conexiones y <br><span>control </span> de alta <br><span>precisión</span></h1>
-					<p class="slide-desc">Encuentra válvulas, racores, mangueras y accesorios diseñados para optimixar el rendimiento de tus sistemas industriales.</p>
+					<span class="slide-tag">Sistema de Vacío</span>
+					<h1 class="slide-title">Soluciones de<br>vacío tipo <span>Venturi</span></h1>
+					<p class="slide-desc">Ideal para pick &amp; place, empaque e industria automotriz, sin partes móviles.</p>
+					<div class="slide-badges">
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-gauge"></i></div>
+							<div><strong>Nivel de vacío</strong><span>Hasta -88 kPa según modelo</span></div>
+						</div>
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-flash"></i></div>
+							<div><strong>Respuesta rápida</strong><span>Bajo mantenimiento, alta durabilidad</span></div>
+						</div>
+					</div>
 					<div class="slide-btns">
-						<a href="proyectos.php" class="btn-primary-ft">Ver catálogo</a>
+						<a href="equipos.php" class="btn-primary-ft">Ver Productos</a>
 						<a href="contacto.php" class="btn-outline-ft">Contactar</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- Slide 5 – Soporte Técnico -->
-			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-3-WEB-5.png');">
+			<!-- Slide 5 – Regulador de Precisión -->
+			<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-INICIO-WEB-5.png');">
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
-					<span class="slide-tag">Soluciones industriales</span>
-					<h1 class="slide-title">Tecnología para la <br> <span>automatización</span> <br> de tus <span>procesos</span></h1>
-					<p class="slide-desc">Impulsamos a la industria con componentes neumáticos, control y soporte técnico confiable para cada aplicación.</p>
+					<span class="slide-tag">Regulador de Precisión</span>
+					<h1 class="slide-title">Precisión y<br><span>repetibilidad</span> garantizada</h1>
+					<p class="slide-desc">Ideal para instrumentación, laboratorios y automatización de precisión.</p>
+					<div class="slide-badges">
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-target"></i></div>
+							<div><strong>Rango de precisión</strong><span>0.01 a 0.8 MPa según modelo</span></div>
+						</div>
+						<div class="slide-badge">
+							<div class="slide-badge-icon"><i class="icon-cog"></i></div>
+							<div><strong>Sistema interno</strong><span>Diafragma de alta sensibilidad</span></div>
+						</div>
+					</div>
 					<div class="slide-btns">
-						<a href="https://wa.me/525620119180" class="btn-primary-ft">Contactar Soporte</a>
+						<a href="https://wa.me/525620119180" class="btn-primary-ft">Cotizar Ahora</a>
 						<a href="about.php" class="btn-outline-ft">Quiénes Somos</a>
 					</div>
 				</div>
