@@ -1,6 +1,7 @@
 <?php
-$page_title       = 'Proyectos | Fluidtec México';
-$page_description = 'Casos de éxito y proyectos industriales realizados por Fluidtec México con las mejores empresas del país.';
+$page_title       = 'Proyectos de Automatización Industrial | Fluidtec México';
+$page_description = 'Casos de éxito y proyectos de neumática y automatización industrial realizados por Fluidtec México para empresas líderes del país.';
+$page_breadcrumb  = [['Proyectos', 'proyectos.php']];
 $page_body_class  = 'page style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
 $page_id          = 'proyectos';
 $page_extra_css   = '<style>

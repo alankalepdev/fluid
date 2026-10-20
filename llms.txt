@@ -1,0 +1,43 @@
+# Fluidtec México
+
+> Distribuidor de componentes neumáticos, eléctricos y de automatización industrial en México: cilindros, válvulas, conexiones, tratamiento de aire, vacío, sensores, PLC y más, con asesoría técnica.
+
+Fluidtec México distribuye componentes de neumática y automatización industrial y fabrica cilindros neumáticos a medida, con asesoría técnica, integración a la aplicación del cliente y soporte en selección de productos. Atiende a la industria en todo México desde Cuautitlán Izcalli, Estado de México.
+
+- Teléfono: (56) 2011 9180
+- WhatsApp: https://wa.me/525620119180
+- Correo: cotizaciones@fluidtec.mx
+- Dirección: Carretera Cuautitlán - Tlalnepantla No. 1, Col. Loma Bonita, Cuautitlán Izcalli, Estado de México, C.P. 54759
+- Horario: lunes a viernes, 8:00 a 18:00
+
+## Páginas principales
+
+- [Inicio](https://fluidtec.mx/): líneas de productos y soluciones destacadas
+- [Nosotros](https://fluidtec.mx/about.php): identidad corporativa, misión, visión, valores y modelo de negocio
+- [Equipos](https://fluidtec.mx/equipos.php): catálogo completo de categorías neumáticas y eléctricas
+- [Proyectos](https://fluidtec.mx/proyectos.php): casos de éxito en automatización industrial
+- [Contacto](https://fluidtec.mx/contacto.php): cotizaciones y datos de contacto
+
+## Productos neumáticos (fichas técnicas)
+
+- [Cilindros](https://fluidtec.mx/fichas.php?cat=cilindros): Cilindros F-ADN, Cilindros F-ADVU, Cilindros F-DNC, Cilindros F-DSN, Cilindros F-SI, Cilindros F-SC, Cilindros F-MA, Cilindros F-CU
+- [Conexiones Neumáticas](https://fluidtec.mx/fichas.php?cat=conexiones): Conexiones rectas, Conexiones codo, Acoplamientos, Reducciones BUSHING, Reguladores de Caudal
+- [Mangueras Neumáticas](https://fluidtec.mx/fichas.php?cat=mangueras): Fluidtec Manguera Antichispa, Fluidtec Manguera de Teflón, Fluidtec Manguera Espiral, Fluidtec Manguera de Poliuretano, Fluidtec Manguera Nylon PA12
+- [Tratamientos de aire](https://fluidtec.mx/fichas.php?cat=tratamiento-de-aire): Filtro-Regulador Serie FOFR, Unidad de Mantenimiento Serie FOU, Regulador de Flujo Inverso Serie F-ARK, Regulador de Presión Serie FOR, Regulador de Precisión Serie F-IR, Modelo HAD, Minirregulador AR2000, Presostato Digital Serie F-ISE30A, Lubricador Serie FOL
+- [Válvulas neumáticas](https://fluidtec.mx/fichas.php?cat=valvulas-neumaticas): Válvula 4H, Válvula 4HV, Válvula 3R, Válvula 4R, Válvula MOV, Válvula MSV, Válvula 4F, Válvula HSV, Válvula 4A, Válvula ST, Válvula KA, Válvula QEA, Válvula 3V, Válvula 4V, Válvula 4M, Válvula F-MFH, Válvula F-SY
+- [Sistemas de Vacío](https://fluidtec.mx/fichas.php?cat=valvulas-de-vacio): Fluidtec F-ZH05BS-06-06, Fluidtec F-ZH05BS-01-01, Fluidtec F-ZU05S, Fluidtec F-ZH05DS-06-06-06, Fluidtec F-ZFC100-04B
+
+## Productos eléctricos y de control (fichas técnicas)
+
+- [Sensores](https://fluidtec.mx/fichas.php?cat=sensores): Sensores inductivos, Sensores capacitivos, Sensores fotoeléctricos, Cables con conector, Accesorios
+- [Relevadores de Control](https://fluidtec.mx/fichas.php?cat=relevadores-de-control): Relevadores Estado Sólido, Relevadores R1520, Relevadores Tipo Clema, Relevadores R2 y R4, Relevadores RM85, Bases y Accesorios
+- [Botonería](https://fluidtec.mx/fichas.php?cat=botoneria): Botones, Cajas, Botones iluminados, Lámparas indicadoras
+- [Fuentes de alimentación](https://fluidtec.mx/fichas.php?cat=fuentes-de-alimentacion): Fuentes monofásicas, Fuentes trifásicas
+- [Interruptores](https://fluidtec.mx/fichas.php?cat=interruptores): Mini interruptores, Pedales, Interruptores de límite
+- [PLC's](https://fluidtec.mx/fichas.php?cat=plc): PLC Compacto, Módulos de expansión
+- [Protección de Motores](https://fluidtec.mx/fichas.php?cat=proteccion-de-motores): Contactor, Relé de sobrecarga, Interruptor termomagnético, Contacto auxiliar, Accesorios
+- [Potenciómetro](https://fluidtec.mx/fichas.php?cat=potenciometro): Potenciómetros de 10 vueltas, Potenciómetros de 1 vuelta
+- [Ventiladores](https://fluidtec.mx/fichas.php?cat=ventiladores): Ventilador axial, Filtro para ventilador, Rejilla metálica
+- [Torretas de Señalización](https://fluidtec.mx/fichas.php?cat=torretas): Torreta AC 110–220 VCA, Torreta 24 VCC, Luces y Buzzer, Accesorios
+- [Controladores de temperatura y contadores](https://fluidtec.mx/fichas.php?cat=controladores): Control de temperatura, Contador digital
+- [Canaleta y Riel DIN](https://fluidtec.mx/fichas.php?cat=riel-din): Canaleta ranurada, Riel DIN Omega

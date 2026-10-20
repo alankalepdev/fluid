@@ -1,6 +1,6 @@
 <?php
-$page_title       = 'Fluidtec México | Componentes Industriales & Automatización';
-$page_description = 'Distribuidores de componentes industriales y equipo de automatización. Electroválvulas, pistones, conectores neumáticos y más con envío inmediato.';
+$page_title       = 'Fluidtec México | Componentes Neumáticos y Automatización Industrial';
+$page_description = 'Distribuidor de componentes neumáticos y de automatización industrial en México: cilindros, válvulas, conexiones, tratamiento de aire, sensores y PLC. Cotiza con asesoría técnica.';
 $page_body_class  = 'home page template-slider style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
 $page_id          = 'index';
 $page_extra_css   = <<<'CSS'

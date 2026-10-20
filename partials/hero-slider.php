@@ -32,7 +32,7 @@
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">Válvulas de Procesos</span>
-					<h1 class="slide-title">Válvulas para<br>procesos <span>exigentes</span></h1>
+					<h2 class="slide-title">Válvulas para<br>procesos <span>exigentes</span></h2>
 					<p class="slide-desc">Para industria alimenticia, química, vapor y agua, con alta resistencia a presión y temperatura.</p>
 					<div class="slide-badges">
 						<div class="slide-badge">
@@ -56,7 +56,7 @@
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">Cilindros Neumáticos</span>
-					<h1 class="slide-title">Cilindros de<br><span>precisión comprobada</span></h1>
+					<h2 class="slide-title">Cilindros de<br><span>precisión comprobada</span></h2>
 					<p class="slide-desc">Series ADN, DNC, DSN, SI, SC/SU y ADVU bajo normas ISO, con fácil integración en sistemas existentes.</p>
 					<div class="slide-badges">
 						<div class="slide-badge">
@@ -80,7 +80,7 @@
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">Sistema de Vacío</span>
-					<h1 class="slide-title">Soluciones de<br>vacío tipo <span>Venturi</span></h1>
+					<h2 class="slide-title">Soluciones de<br>vacío tipo <span>Venturi</span></h2>
 					<p class="slide-desc">Ideal para pick &amp; place, empaque e industria automotriz, sin partes móviles.</p>
 					<div class="slide-badges">
 						<div class="slide-badge">
@@ -104,7 +104,7 @@
 				<div class="slide-overlay"></div>
 				<div class="slide-content">
 					<span class="slide-tag">Regulador de Precisión</span>
-					<h1 class="slide-title">Precisión y<br><span>repetibilidad</span> garantizada</h1>
+					<h2 class="slide-title">Precisión y<br><span>repetibilidad</span> garantizada</h2>
 					<p class="slide-desc">Ideal para instrumentación, laboratorios y automatización de precisión.</p>
 					<div class="slide-badges">
 						<div class="slide-badge">

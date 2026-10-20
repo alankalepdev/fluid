@@ -1,6 +1,7 @@
 <?php
-$page_title       = 'Nosotros | Fluidtec México';
-$page_description = 'Conoce a Fluidtec México, distribuidores especializados en componentes industriales y de automatización con años de experiencia.';
+$page_title       = 'Nosotros | Fluidtec México – Neumática, Ingeniería y Automatización';
+$page_description = 'Conoce a Fluidtec México: misión, visión y valores. Islas de válvulas, pinzas neumáticas y actuadores rotativos con asesoría técnica e integración a tu aplicación.';
+$page_breadcrumb  = [['Nosotros', 'about.php']];
 $page_body_class  = 'page style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
 $page_id          = 'about';
 $page_extra_css   = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">';
@@ -89,7 +90,7 @@ require 'partials/head.php';
 				<div class="row">
 					<div class="col-md-6 text-center" style="padding:5% 0px 0px 0px;background-color:#e7e9ee">
 						<hr class="no_line" style="margin:0 auto 10px auto">
-						<h2><span style="color:#2029bd;">IDENTIDAD CORPORATIVA </span></h2>
+						<h1 class="page-h1"><span style="color:#2029bd;">IDENTIDAD CORPORATIVA </span></h1>
 						<p>Conoce nuestra vision, mision y valores.</p>
 					</div>
 					<div class="col-md-6">
@@ -393,73 +394,63 @@ require 'partials/head.php';
 				<div class="swiper" id="fluidtecSwiper">
 					<div class="swiper-wrapper">
 
-						<!-- Slide 1 – Componentes Industriales -->
-						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-1.png');">
+						<!-- Slide 1 – Islas de Válvulas -->
+						<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-WEB-NOSOTROS-1.png');">
 							<div class="slide-overlay"></div>
 							<div class="slide-content">
-								<span class="slide-tag">Proyectos Industriales</span>
-								<h1 class="slide-title">Soluciones a medida<br><span>para líneas de producción</span></h1>
-								<p class="slide-desc">Desarrollamos propuestas integrales en neumática y automatización para mejorar la productividad y continuidad de tus procesos.</p>
+								<span class="slide-tag">ISLAS DE VÁLVULAS</span>
+								<h2 class="slide-title">Control <span>centralizado</span><br>para automatización</h2>
+								<p class="slide-desc"><strong class="slide-serie">Serie 100M</strong><br>Configuración modular para tu sistema neumático.</p>
+								<ul class="slide-list">
+									<li>Asesoría técnica</li>
+									<li>Integración a tu aplicación</li>
+									<li>Soporte en selección</li>
+								</ul>
 								<div class="slide-btns">
 									<a href="https://wa.me/525620119180" class="btn-primary-ft">Cotizar Ahora</a>
-									<a href="about.php" class="btn-outline-ft">CONOCER MÁS</a>
+									<a href="equipos.php" class="btn-outline-ft">Ver Productos</a>
 								</div>
+								<p class="slide-footer-ft">Neumática · Ingeniería · Automatización</p>
 							</div>
 						</div>
 
-						<!-- Slide 2 – Equipo Neumático -->
-						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-2.png');">
+						<!-- Slide 2 – Pinzas Neumáticas -->
+						<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-WEB-NOSOTROS-2.png');">
 							<div class="slide-overlay"></div>
 							<div class="slide-content">
-								<span class="slide-tag">EMPRESAS DE CONFIANZA</span>
-								<h1 class="slide-title">Trabajamos con la<span> industria</span> que<br> mueve a<span> México</span></h1>
-								<p class="slide-desc">Soluciones confiables en acero inoxidable para sistemas de automatización industrial.</p>
+								<span class="slide-tag">PINZAS NEUMÁTICAS</span>
+								<h2 class="slide-title">Sujeción <span>precisa</span><br>para automatización</h2>
+								<p class="slide-desc"><strong class="slide-serie">Serie MHZ2</strong><br>Diseño compacto para manipulación industrial.</p>
+								<ul class="slide-list">
+									<li>Asesoría técnica</li>
+									<li>Integración a tu aplicación</li>
+									<li>Soporte en selección</li>
+								</ul>
 								<div class="slide-btns">
-									<a href="equipos.php" class="btn-primary-ft">Ver Proyectos</a>
-									<a href="contacto.php" class="btn-outline-ft">Contactar</a>
+									<a href="https://wa.me/525620119180" class="btn-primary-ft">Cotizar Ahora</a>
+									<a href="equipos.php" class="btn-outline-ft">Ver Productos</a>
 								</div>
+								<p class="slide-footer-ft">Neumática · Ingeniería · Automatización</p>
 							</div>
 						</div>
 
-						<!-- Slide 3 – Precios Competitivos -->
-						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-3.png');">
+						<!-- Slide 3 – Actuadores Rotativos -->
+						<div class="swiper-slide" style="background-image:url('assets/images/FLUDITEC-BANNER-WEB-NOSOTROS-3.png');">
 							<div class="slide-overlay"></div>
 							<div class="slide-content">
-								<span class="slide-tag">ASESORÍA PERSONALIZADA</span>
-								<h1 class="slide-title"><span>Soporte técnico</span><br> para cada <br><span>proyecto</span></h1>
-								<p class="slide-desc">La mejor opción para el control de temperatura en procesos industriales.</p>
+								<span class="slide-tag">ACTUADORES ROTATIVOS</span>
+								<h2 class="slide-title">Movimiento <span>angular</span><br>para automatización</h2>
+								<p class="slide-desc"><strong class="slide-serie">Serie MSQ</strong><br>Diseño compacto para integración neumática.</p>
+								<ul class="slide-list">
+									<li>Asesoría técnica</li>
+									<li>Integración a tu aplicación</li>
+									<li>Soporte en selección</li>
+								</ul>
 								<div class="slide-btns">
-									<a href="https://wa.me/525620119180" class="btn-primary-ft">Solicitar asesoría</a>
-									<a href="proyectos.php" class="btn-outline-ft">Quiénes somos</a>
+									<a href="https://wa.me/525620119180" class="btn-primary-ft">Cotizar Ahora</a>
+									<a href="equipos.php" class="btn-outline-ft">Ver Productos</a>
 								</div>
-							</div>
-						</div>
-
-						<!-- Slide 4 – Empresas de Confianza -->
-						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-4.png');">
-							<div class="slide-overlay"></div>
-							<div class="slide-content">
-								<span class="slide-tag">COMPONENTES neumáticOS</span>
-								<h1 class="slide-title">Conexiones y <br><span>control </span> de alta <br><span>precisión</span></h1>
-								<p class="slide-desc">Encuentra válvulas, racores, mangueras y accesorios diseñados para optimixar el rendimiento de tus sistemas industriales.</p>
-								<div class="slide-btns">
-									<a href="proyectos.php" class="btn-primary-ft">Ver catálogo</a>
-									<a href="contacto.php" class="btn-outline-ft">Contactar</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide 5 – Soporte Técnico -->
-						<div class="swiper-slide" style="background-image:url('assets/images/fluidtec-banner-slider-5.png');">
-							<div class="slide-overlay"></div>
-							<div class="slide-content">
-								<span class="slide-tag">Soluciones industriales</span>
-								<h1 class="slide-title">Tecnología para la <br> <span>automatización</span> <br> de tus <span>procesos</span></h1>
-								<p class="slide-desc">Impulsamos a la industria con componentes neumáticos, control y soporte técnico confiable para cada aplicación.</p>
-								<div class="slide-btns">
-									<a href="https://wa.me/525620119180" class="btn-primary-ft">Contactar Soporte</a>
-									<a href="about.php" class="btn-outline-ft">Quiénes Somos</a>
-								</div>
+								<p class="slide-footer-ft">Neumática · Ingeniería · Automatización</p>
 							</div>
 						</div>
 

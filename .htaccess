@@ -1,0 +1,12 @@
+# Sitemap con URL estándar: /sitemap.xml → sitemap.php
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule ^sitemap\.xml$ sitemap.php [L]
+</IfModule>
+
+# Bloquear acceso directo a configuración (credenciales SMTP)
+<IfModule mod_authz_core.c>
+	<FilesMatch "^(mail|mail\.example|site)\.php$">
+		Require all denied
+	</FilesMatch>
+</IfModule>
