@@ -129,3 +129,16 @@
 	color: inherit;
 	font-family: swiper-icons !important;
 }
+
+/* ===== Hero slider: lista y pie (slider inferior de Nosotros) ===== */
+.fluidtec-hero-slider .slide-serie { color: #4ED199; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; }
+.fluidtec-hero-slider .slide-list { list-style: none; padding: 0; margin: -10px 0 28px; }
+.fluidtec-hero-slider .slide-list li { font-family: 'Poppins', sans-serif; font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.9; padding-left: 24px; position: relative; }
+.fluidtec-hero-slider .slide-list li::before { content: '✓'; position: absolute; left: 0; color: #4ED199; font-weight: 700; }
+.fluidtec-hero-slider .slide-footer-ft { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.15); padding-top: 14px; margin: 24px 0 0; }
+@media (max-width: 768px) {
+	.fluidtec-hero-slider .slide-list li { font-size: 13px; }
+}
+
+/* Títulos de página convertidos de h2 a h1 (SEO) con el mismo aspecto */
+h1.page-h1 { line-height: 1.2; }

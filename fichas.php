@@ -36,7 +36,22 @@ $grupos     = array_values(array_unique(array_column($familias, 'group')));
 $fichaTitle = $producto['ficha_title'] ?? $producto['title'];
 $iconEquipo = "$producto[icon]";
 $page_title       = 'Fichas Técnicas – ' . $fichaTitle . ' | Fluidtec México';
-$page_description = 'Descarga las fichas técnicas de nuestra línea de ' . mb_strtolower($fichaTitle) . '.';
+$page_description = 'Fichas técnicas de ' . mb_strtolower($fichaTitle) . ' Fluidtec: ' . implode(', ', array_slice(array_column($familias, 'name'), 0, 6)) . '. Descarga los PDF y cotiza con asesoría técnica.';
+$page_path        = 'fichas.php?cat=' . rawurlencode($producto['slug']);
+$page_breadcrumb  = [['Equipos', 'equipos.php'], [$fichaTitle, $page_path]];
+if (!empty($producto['img_ficha'])) $page_og_image = $producto['img_ficha'];
+$page_schema      = [[
+	'@type'           => 'ItemList',
+	'name'            => 'Fichas técnicas – ' . $fichaTitle,
+	'numberOfItems'   => count($familias),
+	'itemListElement' => array_map(fn($f, $i) => array_filter([
+		'@type'       => 'ListItem',
+		'position'    => $i + 1,
+		'name'        => $f['name'],
+		'description' => $f['desc'] ?: null,
+		'url'         => $f['pdf_url'] ? (require __DIR__ . '/config/site.php')['url'] . '/' . $f['pdf_url'] : null,
+	]), $familias, array_keys($familias)),
+]];
 $page_body_class  = 'page style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
 $page_id          = 'fichas';
 $page_extra_css   = <<<'CSS'

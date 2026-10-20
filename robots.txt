@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Disallow: /config/
+Disallow: /vendor/
+Disallow: /src/
+Disallow: /send_mail.php
+
+# Buscadores y asistentes de IA: acceso permitido para que citen el sitio
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+Disallow: /config/
+Disallow: /vendor/
+Disallow: /src/
+Disallow: /send_mail.php
+
+Sitemap: https://fluidtec.mx/sitemap.xml

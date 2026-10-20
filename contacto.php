@@ -1,6 +1,7 @@
 <?php
-$page_title       = 'Contacto | Fluidtec México';
-$page_description = 'Contacta a Fluidtec México para cotizaciones de componentes industriales. Tel: (56) 2011 9180. Cuautitlán Izcalli, Estado de México.';
+$page_title       = 'Contacto y Cotizaciones | Fluidtec México';
+$page_description = 'Cotiza componentes neumáticos y de automatización con Fluidtec México. Tel. (56) 2011 9180, cotizaciones@fluidtec.mx. Cuautitlán Izcalli, Estado de México.';
+$page_breadcrumb  = [['Contacto', 'contacto.php']];
 $page_body_class  = 'page style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding no-shadows header-classic header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-no-borders mobile-tb-hide mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-sticky';
 $page_id          = 'contacto';
 $page_extra_css   = <<<'CSS'
@@ -59,7 +60,7 @@ require 'partials/head.php';
 					<div class="col-md-6 text-center mt-4" style="background-color:#e7e9ee">
 						<div class="mt-5">
 							<i class="icon-mail" style="font-size:40px;color:#2029bd;"></i>
-							<h2><span style="color:#2029bd;">Contáctanos,<br>estamos aquí</span></h2>
+							<h1 class="page-h1"><span style="color:#2029bd;">Contáctanos,<br>estamos aquí</span></h1>
 							<p style="color:#666;max-width:350px;margin:0 auto;">Cotizaciones, soporte técnico y ventas. Respondemos en menos de 24 horas.</p>
 						</div>
 					</div>
